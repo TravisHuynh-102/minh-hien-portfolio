@@ -1,0 +1,1471 @@
+import type { ArchiveProject, FeaturedProject } from "@/types/portfolio";
+
+export const FEATURED_PROJECTS: FeaturedProject[] = [
+  {
+    slug: "university-admissions-imc-2025",
+    category: "imc",
+    thumbnail: "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/stock-images/767d99bb371a54d0d36751e8cecae43c.jpg",
+    visualAccentCode: "IMC // O2O + PAID FUNNEL",
+    industryPill: {
+      vi: "Giáo dục Đại học (Higher Ed)",
+      en: "Higher Education",
+    },
+    rolePill: {
+      vi: "Campaign Lead (IMC & Performance)",
+      en: "Campaign Lead (IMC & Performance)",
+    },
+    timeframe: "Q1–Q3 / 2025 (6 Tháng)",
+    budgetScale: {
+      vi: "Quy mô Lớn (9 chữ số VNĐ • NDA-Safe)",
+      en: "Mid-to-Large Scale (9-Figure VND • NDA-Safe)",
+    },
+    channels: [
+      "Meta Ads",
+      "TikTok 9:16",
+      "Google Search/PMax",
+      "PR Báo chí",
+      "O2O Open Day",
+      "Zalo ZNS / CRM",
+    ],
+    title: {
+      vi: "Chiến dịch Tuyển sinh Đại học Đa kênh: Đồng bộ IMC & Phễu Chuyển đổi O2O",
+      en: "Omnichannel University Admissions IMC: Synchronizing Brand Story & O2O Lead Funnel",
+    },
+    shortSummary: {
+      vi: "Xoay trục thông điệp hướng nghiệp thực chiến kết hợp phễu Quiz CRO, vượt 28% chỉ tiêu nhập học và giảm 31% CPL.",
+      en: "Pivoted career-outcome storytelling with an interactive Quiz CRO funnel, exceeding enrollment targets by 28% at -31% CPL.",
+    },
+    cardMiniMetrics: [
+      {
+        value: "+128% KPI",
+        label: { vi: "Tỷ lệ Nhập học thực tế", en: "Enrollment Target Achieved" },
+      },
+      {
+        value: "-31% CPL",
+        label: { vi: "Chi phí mỗi Lead chuẩn", en: "Blended Cost Per Lead" },
+      },
+      {
+        value: "18.5M+ Views",
+        label: { vi: "Độ phủ Video & PR", en: "Cross-Channel Video & PR" },
+      },
+    ],
+    kpiComparison: [
+      {
+        metric: { vi: "Hồ sơ Đủ điều kiện (MQL)", en: "Qualified Inquiries (MQL)" },
+        target: "12,000 Leads",
+        achieved: "15,840 Leads",
+        delta: "+32.0% vs KPI",
+      },
+      {
+        metric: { vi: "Chi phí mỗi Lead (CPL)", en: "Cost Per Inquiry (CPL)" },
+        target: "Chuẩn lịch sử (100%)",
+        achieved: "69% mức chuẩn",
+        delta: "-31.0% CPL",
+      },
+      {
+        metric: { vi: "Tỷ lệ Chuyển đổi Trang đích", en: "Landing Page CVR" },
+        target: "4.80%",
+        achieved: "8.40%",
+        delta: "+75.0% Lift",
+      },
+      {
+        metric: { vi: "Tỷ lệ Nhập học (SQL → Enrolled)", en: "Enrollment Yield (SQL)" },
+        target: "100% Kế hoạch năm",
+        achieved: "128% Kế hoạch năm",
+        delta: "+28.0% Exceeded",
+      },
+    ],
+    challenge: {
+      marketContext: {
+        vi: "Mùa tuyển sinh đại học cạnh tranh gay gắt khi hơn 40 trường cùng đẩy ngân sách quảng cáo số trong khung thời gian 90 ngày cao điểm, khiến CPM toàn ngành tăng 45%.",
+        en: "Peak university admissions season saw 40+ institutions bidding aggressively within a 90-day window, driving industry-wide auction CPMs up by 45%.",
+      },
+      marcomBottleneck: {
+        vi: "Thông điệp truyền thông cũ nặng tính học thuật chung chung, thiếu bằng chứng việc làm thực tế khiến học sinh Gen Z lướt qua ngay trong 2 giây đầu.",
+        en: "Legacy messaging relied on generic academic claims without tangible career outcomes, causing Gen Z prospects to scroll past within 2 seconds.",
+      },
+      performanceBottleneck: {
+        vi: "Landing Page cũ bắt điền 10 trường thông tin tĩnh trên điện thoại làm tỷ lệ thoát trang lên tới 82%, đội tư vấn bị quá tải bởi Lead rác.",
+        en: "The legacy landing page forced a 10-field static mobile form with an 82% bounce rate, flooding admissions counselors with unqualified leads.",
+      },
+      customerInsight: {
+        vi: "Gen Z chọn trường vì 'trải nghiệm thật của đàn anh đi trước', trong khi Phụ huynh chốt đóng học phí vì 'lộ trình học bổng và cam kết việc làm rõ ràng'.",
+        en: "Gen Z chooses campuses via authentic peer stories, whereas parents commit tuition based on transparent scholarship tiers and graduate employment proof.",
+      },
+      bigIdea: {
+        vi: "\"Thử Thật Từ Năm Nhất — Vững Việc Ngay Khi Ra Trường\": Tách 2 luồng nội dung riêng biệt cho Học sinh (TikTok/Reels trải nghiệm) và Phụ huynh (Facebook/Google/PR cam kết đầu ra).",
+        en: "\"Real-World Labs From Year One — Career-Ready at Graduation\": Dual-track narrative targeting students via 9:16 peer Reels and parents via ROI-focused PR & Search.",
+      },
+    },
+    funnelSynergy: [
+      {
+        stageCode: "TOFU",
+        stageName: {
+          vi: "TOFU — Phủ sóng Nhận diện & Khơi gợi Nhu cầu",
+          en: "TOFU — High-Velocity Reach & Problem Awareness",
+        },
+        marcomAction: {
+          vi: "Tung chuỗi 25 Video 9:16 'Một ngày làm sinh viên ngành Hot' cùng Đại sứ Sinh viên và 15 bài PR trên báo chính thống định hướng chọn ngành.",
+          en: "Launched a 25-part 9:16 'Day in the Life by Major' ambassador video series paired with 15 tier-1 PR articles on career ROI.",
+        },
+        performanceAction: {
+          vi: "Chạy Reach/ThruPlay tối ưu Hook Rate 3s trên TikTok & Meta Reels; thu thập tệp Video Viewers >50% để nuôi phễu Remarketing.",
+          en: "Deployed ThruPlay & 3s Hook-optimized campaigns on TikTok & Meta Reels, building custom audiences of >50% video viewers.",
+        },
+        kpis: ["18.5M+ Views", "41.2% 3s Hook Rate", "CPM -24% vs Benchmark"],
+      },
+      {
+        stageCode: "MOFU",
+        stageName: {
+          vi: "MOFU — Nuôi dưỡng Niềm tin & Phân loại Ngành học",
+          en: "MOFU — Intent Qualification & Interactive Engagement",
+        },
+        marcomAction: {
+          vi: "Tổ chức chuỗi Campus Open Day O2O (3,200+ người tham dự) và phát hành Bộ Cẩm nang Ngành nghề + Công cụ Tính Học bổng trực tuyến.",
+          en: "Hosted O2O Campus Open Days (3,200+ attendees) and released an Interactive Scholarship Calculator & Career Playbook.",
+        },
+        performanceAction: {
+          vi: "Retarget tệp tương tác bằng Carousel theo đúng nhóm ngành quan tâm (CNTT, Kinh tế, Thiết kế), dẫn về Landing Page Quiz 3 bước.",
+          en: "Retargeted engaged cohorts with major-specific dynamic Carousels routing directly to the 3-step Interactive Quiz Landing Page.",
+        },
+        kpis: ["8.4% Quiz LP CVR", "15,840 Qualified MQLs", "3,200+ O2O Check-ins"],
+      },
+      {
+        stageCode: "BOFU",
+        stageName: {
+          vi: "BOFU — Chốt Hồ sơ Xét tuyển & Tối ưu Nhập học",
+          en: "BOFU — Application Closing & CRM CAPI Optimization",
+        },
+        marcomAction: {
+          vi: "Phát sóng Livestream giải đáp học bổng 1:1 cùng Ban Giám hiệu và gửi chuỗi tin nhắn Zalo ZNS cá nhân hóa nhắc lịch nộp hồ sơ.",
+          en: "Executed Dean Q&A Livestreams and automated personalized Zalo ZNS / SMS sequences ahead of scholarship deadlines.",
+        },
+        performanceAction: {
+          vi: "Phủ Google Search Brand/High-Intent Keywords và đẩy ngược dữ liệu 'Hồ sơ Hợp lệ' từ CRM lên Meta/Google qua Offline CAPI.",
+          en: "Captured high-intent Google Search queries and fed CRM-verified 'Qualified Application' events back to Meta/Google via CAPI.",
+        },
+        kpis: ["-31% Blended CPL", "26.4% MQL→SQL Rate", "128% Enrollment Target"],
+      },
+    ],
+    marcomShowcase: [
+      {
+        id: "adm-asset-1",
+        mediaSrc: "/images/projects/university-admissions-imc-2025/kv-master.webp",
+        mediaType: "image",
+        aspectLabel: "16:9 KEY VISUAL",
+        tag: { vi: "Hệ thống Key Visual & OOH", en: "Master Key Visual & OOH" },
+        caption: {
+          vi: "Hệ nhận diện chủ đạo xuất hiện đồng bộ trên 40 cụm Billboard trường THPT và hệ thống Digital Banner.",
+          en: "Master visual system deployed across 40 high-school OOH billboards and digital display networks.",
+        },
+      },
+      {
+        id: "adm-asset-2",
+        mediaSrc: "/images/projects/university-admissions-imc-2025/ambassador-reel.mp4",
+        mediaType: "video-9-16",
+        aspectLabel: "9:16 VERTICAL VIDEO",
+        tag: { vi: "Reels/TikTok Đại sứ Sinh viên", en: "Student Ambassador 9:16 Reels" },
+        caption: {
+          vi: "Video 9:16 quay thực tế tại phòng Lab AI & Studio đạt 41.2% Hook Rate 3s và kéo giảm 34% CPC.",
+          en: "Authentic 9:16 campus lab tour achieving a 41.2% 3-second Hook Rate and reducing link CPC by 34%.",
+        },
+      },
+      {
+        id: "adm-asset-3",
+        mediaSrc: "/images/projects/university-admissions-imc-2025/openday-o2o.webp",
+        mediaType: "image",
+        aspectLabel: "16:9 O2O EVENT",
+        tag: { vi: "Sự kiện Open Day 3,200+ khách", en: "3,200+ Attendee O2O Open Day" },
+        caption: {
+          vi: "Trải nghiệm thực tế kết hợp quét QR định danh UTM tại quầy, thu về 620+ bộ hồ sơ xét tuyển ngay tại sự kiện.",
+          en: "Experiential booths with UTM QR check-ins capturing 620+ on-the-spot applications in a single weekend.",
+        },
+      },
+    ],
+    performanceProof: {
+      funnelDiagramNote: {
+        vi: "Kiến trúc Phân bổ Ngân sách & Luồng Retargeting 3 Tầng khép kín từ TikTok/Meta Video sang Google Search và Zalo ZNS CRM.",
+        en: "Closed-loop 3-Tier Budget & Retargeting Architecture bridging TikTok/Meta video cohorts with Google Search and Zalo ZNS CRM.",
+      },
+      retargetingLayers: [
+        {
+          layerCode: "LAYER 01 // COLD ACQUISITION",
+          audience: {
+            vi: "Học sinh lớp 12 & Phụ huynh (Lookalike 1-3% từ tệp Nhập học năm trước + Interest Giáo dục)",
+            en: "Grade 12 Students & Parents (1-3% Lookalike of past enrollments + Higher-Ed interests)",
+          },
+          creativeHook: {
+            vi: "Video 9:16 trải nghiệm ngành học & Bài PR báo chí phân tích cơ hội việc làm",
+            en: "9:16 Major Lab Tour Videos & Tier-1 PR articles on graduate employment rates",
+          },
+          conversionGoal: {
+            vi: "Thu hút >50% Video Views & Tương tác trang đích",
+            en: "Capture >50% Video Viewers & initial site visitors",
+          },
+        },
+        {
+          layerCode: "LAYER 02 // WARM QUALIFICATION",
+          audience: {
+            vi: "Người đã xem >50% Video, tương tác Fanpage hoặc đọc bài PR trong 14 ngày",
+            en: "14-Day >50% Video Viewers, Social Engagers & PR Editorial Readers",
+          },
+          creativeHook: {
+            vi: "Carousel Học bổng theo từng ngành + Trắc nghiệm 'Tính mức học bổng trong 60 giây'",
+            en: "Major-specific Scholarship Carousels + '60-Second Scholarship Eligibility Quiz'",
+          },
+          conversionGoal: {
+            vi: "Hoàn thành Quiz 3 bước (Thu thập MQL có phân loại ngành)",
+            en: "Complete 3-Step Quiz (Captures major-segmented MQL)",
+          },
+        },
+        {
+          layerCode: "LAYER 03 // HOT CLOSING & CAPI",
+          audience: {
+            vi: "MQL chưa nộp hồ sơ + Tệp tìm kiếm từ khóa thương hiệu trên Google",
+            en: "Unconverted MQLs + High-Intent Branded Google Searchers",
+          },
+          creativeHook: {
+            vi: "Testimonial Phụ huynh + Đếm ngược hạn chót học bổng + Zalo ZNS tự động",
+            en: "Parent Video Testimonials + Scholarship Countdown + Automated Zalo ZNS",
+          },
+          conversionGoal: {
+            vi: "Nộp hồ sơ xét tuyển & Check-in Open Day (Đồng bộ Offline CAPI)",
+            en: "Verified Application & Open Day Check-in (Synced via Offline CAPI)",
+          },
+        },
+      ],
+      budgetSplit: [
+        {
+          label: { vi: "Meta Ads (Lead & Retargeting)", en: "Meta Ads (Lead & Retargeting)" },
+          percentage: 42,
+          channelNote: { vi: "Chốt MQL Phụ huynh & Học sinh", en: "Core MQL capture for Parents & Students" },
+        },
+        {
+          label: { vi: "TikTok Ads (9:16 Spark Ads)", en: "TikTok Ads (9:16 Spark Ads)" },
+          percentage: 25,
+          channelNote: { vi: "Kéo phễu TOFU Gen Z giá rẻ", en: "Low-CPM Gen Z top-of-funnel video reach" },
+        },
+        {
+          label: { vi: "Google Search & PMax", en: "Google Search & PMax" },
+          percentage: 20,
+          channelNote: { vi: "Đón đầu nhu cầu tìm kiếm chủ động", en: "High-intent active search capture" },
+        },
+        {
+          label: { vi: "O2O Activation & PR Media", en: "O2O Activation & PR Media" },
+          percentage: 13,
+          channelNote: { vi: "Bảo chứng uy tín & chốt trực tiếp", en: "Trust authority & offline conversion" },
+        },
+      ],
+      dataToCreativeLoop: {
+        discovery: {
+          vi: "Dữ liệu Ads tuần thứ 2 chỉ ra nhóm quảng cáo dùng ảnh thiết kế 2D tĩnh có CTR giảm 48% sau 10 ngày và tỷ lệ rớt tại form đăng ký trên mobile lên tới 79%.",
+          en: "Week-2 ad diagnostics revealed static 2D graphic banners suffered a 48% CTR decay after 10 days, while mobile landing page form drop-off hit 79%.",
+        },
+        actionTaken: {
+          vi: "Tôi chỉ đạo đội Content quay gấp 8 video 9:16 phỏng vấn thật tại phòng Lab (xoay góc mở đầu 3s trực diện vào mức lương khởi điểm) và rút gọn Landing Page thành Quiz 3 bước tính học bổng.",
+          en: "I directed the creative squad to shoot 8 raw 9:16 student lab interviews (hooking on starting salaries in the first 3s) and rebuilt the form into a 3-step Scholarship Quiz.",
+        },
+        outcomeLift: {
+          vi: "Hook Rate 3 giây tăng vọt từ 19% lên 41.2%, tỷ lệ chuyển đổi trang đích (CVR) tăng từ 4.8% lên 8.4%, giúp kéo giảm 31% CPL toàn chiến dịch.",
+          en: "3-second Hook Rate jumped from 19% to 41.2% and Landing Page CVR surged from 4.8% to 8.4%, driving a 31% reduction in blended CPL.",
+        },
+        fullNarrative: {
+          vi: "Phát hiện ảnh tĩnh bị bão hòa và form dài gây rớt khách ở ngày thứ 10, tôi lập tức chuyển ngân sách sang chuỗi Reels phỏng vấn sinh viên tại Lab kết hợp phễu Quiz học bổng 3 bước, giúp CVR tăng lên 8.4% và giảm 31% CPL.",
+          en: "Spotting static banner fatigue and mobile form drop-off on Day 10, I pivoted spend to raw 9:16 lab interview Reels paired with a 3-step Scholarship Quiz, lifting CVR to 8.4% and cutting CPL by 31%.",
+        },
+      },
+    },
+    retrospective: {
+      beforeAfterMetrics: [
+        {
+          label: { vi: "3-Second Video Hook Rate", en: "3-Second Video Hook Rate" },
+          before: 19,
+          after: 41.2,
+          unit: "%",
+          displayBefore: "19.0%",
+          displayAfter: "41.2%",
+          deltaBadge: "+116% Lift",
+        },
+        {
+          label: { vi: "Landing Page CVR (Mobile)", en: "Landing Page CVR (Mobile)" },
+          before: 4.8,
+          after: 8.4,
+          unit: "%",
+          displayBefore: "4.8%",
+          displayAfter: "8.4%",
+          deltaBadge: "+75% Lift",
+        },
+        {
+          label: { vi: "Chỉ số Chi phí mỗi Lead (CPL Index)", en: "Blended CPL Cost Index" },
+          before: 100,
+          after: 69,
+          unit: "idx",
+          displayBefore: "100% (Gốc)",
+          displayAfter: "69% (Tối ưu)",
+          deltaBadge: "-31% CPL",
+        },
+        {
+          label: { vi: "Tỷ lệ MQL chuyển thành Hồ sơ (SQL)", en: "MQL-to-SQL Qualification Rate" },
+          before: 15.2,
+          after: 26.4,
+          unit: "%",
+          displayBefore: "15.2%",
+          displayAfter: "26.4%",
+          deltaBadge: "+73% Quality",
+        },
+      ],
+      businessImpact: [
+        {
+          vi: "Hoàn thành 128% chỉ tiêu nhập học toàn khóa trước hạn 2 tuần, tiết kiệm hàng trăm triệu đồng chi phí quảng cáo nhờ hạ 31% CPL.",
+          en: "Achieved 128% of annual enrollment quota two weeks ahead of schedule while cutting blended CPL by 31%.",
+        },
+        {
+          vi: "Tỷ lệ Lead chất lượng (SQL) tăng từ 15.2% lên 26.4% nhờ bộ câu hỏi lọc tự động trên Quiz Landing Page và đồng bộ Offline CAPI.",
+          en: "Lifted MQL-to-SQL qualification rate from 15.2% to 26.4% via quiz pre-qualification and server-side CRM CAPI feedback.",
+        },
+      ],
+      brandImpact: [
+        {
+          vi: "Thu về 18.5M+ lượt xem đa kênh và tăng +64% lượng tìm kiếm tự nhiên (Branded Search) về tên trường trên Google và TikTok.",
+          en: "Generated 18.5M+ cross-channel views and a +64% surge in organic branded search volume across Google and TikTok.",
+        },
+        {
+          vi: "Xây dựng thư viện hơn 60 tư liệu Video UGC/Ambassador chuẩn hóa để tái sử dụng cho các kỳ tuyển sinh tiếp theo.",
+          en: "Built a evergreen library of 60+ high-converting student UGC and lab video assets for subsequent admission cycles.",
+        },
+      ],
+      winningFormula: {
+        vi: "Tách bạch thông điệp Cảm xúc Trải nghiệm (9:16 Video cho Học sinh) + Lý tính Cam kết Đầu ra (PR/Search cho Phụ huynh) + Phễu Quiz 3 bước giảm ma sát.",
+        en: "Dual-audience creative split (9:16 peer Reels for students + ROI proof for parents) unified under a frictionless 3-step Quiz funnel.",
+      },
+      whatToImprove: {
+        vi: "Nếu triển khai lại từ ngày đầu, tôi sẽ tích hợp AI Voicebot/Zalo Авто-Call phản hồi trong 60 giây ngay khi ứng viên hoàn tất Quiz để đẩy tỷ lệ bắt máy lên trên 90%.",
+        en: "In the next iteration, I would deploy automated 60-second Zalo/CRM instant callback routing upon quiz completion to push contact rates past 90%.",
+      },
+    },
+  },
+  {
+    slug: "b2b-industrial-tech-lead-engine",
+    category: "performance-b2b",
+    thumbnail: "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/stock-images/821d815affa6496c39cbdeeec7a84603.jpg",
+    visualAccentCode: "B2B // CAPI + 9:16 DEMO FUNNEL",
+    industryPill: {
+      vi: "Công nghệ & Giải pháp B2B",
+      en: "B2B Industrial & SaaS Tech",
+    },
+    rolePill: {
+      vi: "Performance & Growth Architect",
+      en: "Performance & Growth Architect",
+    },
+    timeframe: "Q2–Q4 / 2024 (5 Tháng)",
+    budgetScale: {
+      vi: "Quy mô Trung-Lớn (8-9 chữ số VNĐ • NDA-Safe)",
+      en: "Mid-Scale B2B Budget (8-to-9 Figure VND • NDA-Safe)",
+    },
+    channels: [
+      "LinkedIn Ads",
+      "Meta Lead/Conversion",
+      "Google High-Intent Search",
+      "9:16 Demo Video",
+      "HubSpot CRM CAPI",
+    ],
+    title: {
+      vi: "Tái cấu trúc Phễu B2B Lead Gen: Kết hợp Video Thực nghiệm 9:16 & Đồng bộ CRM CAPI",
+      en: "Re-Engineering B2B Lead Generation: 9:16 Technical Video Hooks & CRM Offline CAPI",
+    },
+    shortSummary: {
+      vi: "Phá bỏ định kiến B2B khô khan bằng chuỗi Video Demo 30s và chấm điểm Lead tự động, tăng 2.2x lượng SQL và giảm 38% CPL.",
+      en: "Replaced dry B2B brochures with 30s 9:16 ROI demos and CRM CAPI scoring, scaling qualified SQL pipeline by 2.2x at -38% CPL.",
+    },
+    cardMiniMetrics: [
+      {
+        value: "2.2x SQLs",
+        label: { vi: "Khách hàng B2B đạt chuẩn", en: "Sales-Qualified Pipeline" },
+      },
+      {
+        value: "-38% CPL",
+        label: { vi: "Giảm chi phí mỗi Lead B2B", en: "B2B Cost-Per-Lead Drop" },
+      },
+      {
+        value: "24.5% SQL%",
+        label: { vi: "Tỷ lệ chuyển đổi MQL→SQL", en: "MQL-to-SQL Conversion" },
+      },
+    ],
+    kpiComparison: [
+      {
+        metric: { vi: "Tỷ lệ MQL đạt chuẩn Sales (SQL)", en: "MQL-to-SQL Qualification Rate" },
+        target: "15.0% (Chuẩn cũ 11%)",
+        achieved: "24.5%",
+        delta: "+122% vs Baseline",
+      },
+      {
+        metric: { vi: "Chi phí mỗi SQL (Cost per SQL)", en: "Cost Per Sales-Qualified Lead" },
+        target: "Giảm 15%",
+        achieved: "Giảm 38%",
+        delta: "-38.0% Cost Drop",
+      },
+      {
+        metric: { vi: "3-Second Hook Rate (Video B2B)", en: "3-Second Video Hook Rate" },
+        target: "25.0%",
+        achieved: "42.6%",
+        delta: "+70.4% vs Benchmark",
+      },
+      {
+        metric: { vi: "Giá trị Pipeline Tạo mới", en: "Attributed Pipeline Value" },
+        target: "100% Chỉ tiêu Quý",
+        achieved: "164% Chỉ tiêu Quý",
+        delta: "+64.0% Pipeline Lift",
+      },
+    ],
+    challenge: {
+      marketContext: {
+        vi: "Doanh nghiệp cung cấp giải pháp tự động hóa & phần mềm quản trị nhà máy B2B với giá trị hợp đồng lớn, chu kỳ chốt sale kéo dài 45–90 ngày.",
+        en: "Enterprise industrial automation & factory SaaS provider with high contract values and complex 45-to-90-day procurement cycles.",
+      },
+      marcomBottleneck: {
+        vi: "Tài liệu bán hàng chỉ toàn PDF thông số kỹ thuật dài 20 trang, không làm nổi bật được bài toán tiết kiệm chi phí vận hành cho Giám đốc Nhà máy/CEO.",
+        en: "Marketing collateral consisted of dense 20-page technical PDFs that failed to visualize immediate OPEX savings for Factory Directors and COOs.",
+      },
+      performanceBottleneck: {
+        vi: "Thuật toán Meta/Google tối ưu nhầm vào tệp tìm việc hoặc sinh viên tải tài liệu miễn phí vì thiếu luồng dữ liệu phản hồi chất lượng Lead thực tế từ CRM.",
+        en: "Ad algorithms over-indexed on job seekers and students downloading free PDFs due to zero closed-loop CRM qualification data feeding back to ad platforms.",
+      },
+      customerInsight: {
+        vi: "Chủ doanh nghiệp và Giám đốc vận hành không mua 'tính năng phần mềm'—họ mua 'khả năng cắt giảm 20% hao hụt vận hành và hoàn vốn trong 6 tháng'.",
+        en: "COOs and Factory Owners don't buy software features—they buy a proven 20% reduction in operational waste with a 6-month payback period.",
+      },
+      bigIdea: {
+        vi: "\"Nhìn Thấy Lợi Nhuận Thu Hồi Trong 30 Giây\": Biến các ca triển khai thành công thành chuỗi Video 9:16 đối chiếu Trước/Sau ngay tại nhà máy kết hợp Công cụ Tính ROI trực tuyến.",
+        en: "\"See Your 6-Month Payback in 30 Seconds\": Transformed dry case studies into on-site 9:16 Before/After factory videos paired with an interactive ROI Calculator.",
+      },
+    },
+    funnelSynergy: [
+      {
+        stageCode: "TOFU",
+        stageName: {
+          vi: "TOFU — Chạm Đúng Nỗi Đau Vận Hành của C-Level",
+          en: "TOFU — Decision-Maker Pain-Point Disruption",
+        },
+        marcomAction: {
+          vi: "Sản xuất 10 Video 9:16 quay trực tiếp tại dây chuyền khách hàng thật, mở đầu bằng con số tiền thất thoát mỗi tháng nếu quản lý thủ công.",
+          en: "Produced 10 on-site 9:16 vertical videos opening with quantified monthly revenue leakage caused by manual factory tracking.",
+        },
+        performanceAction: {
+          vi: "Chạy phân phối chéo trên LinkedIn (nhắm theo chức danh COO/Director) và Meta Broad/Lookalike với mục tiêu lọc tệp xem trên 15 giây.",
+          en: "Targeted COOs/Directors on LinkedIn and Meta Broad/Value Lookalikes, isolating high-intent 15-second video thru-play cohorts.",
+        },
+        kpis: ["42.6% 3s Hook Rate", "29.1% 15s Hold Rate", "-34% Cost Per ThruPlay"],
+      },
+      {
+        stageCode: "MOFU",
+        stageName: {
+          vi: "MOFU — Định Lượng Hiệu Quả & Lọc Quy Mô Doanh Nghiệp",
+          en: "MOFU — Interactive ROI Modeling & Firmographic Filtering",
+        },
+        marcomAction: {
+          vi: "Xây dựng Landing Page tích hợp 'Bảng tính Thời gian Hoàn vốn (ROI Calculator)' và Báo cáo Case Study ngành sản xuất.",
+          en: "Built a dedicated Landing Page featuring an interactive 'Payback & ROI Calculator' alongside downloadable industry case studies.",
+        },
+        performanceAction: {
+          vi: "Triển khai câu hỏi lọc quy mô nhân sự/doanh thu bắt buộc (Conditional Logic) ngay trên Form để loại bỏ 100% tệp ngoài đối tượng B2B.",
+          en: "Implemented conditional firmographic screening questions (company size & monthly output) to filter out non-B2B inquiries.",
+        },
+        kpis: ["6.8% Landing Page CVR", "78% Valid Business Emails", "-38% Blended CPL"],
+      },
+      {
+        stageCode: "BOFU",
+        stageName: {
+          vi: "BOFU — Đặt Lịch Demo 1:1 & Đồng Bộ Offline CAPI",
+          en: "BOFU — 1:1 Executive Demo Booking & CRM CAPI Sync",
+        },
+        marcomAction: {
+          vi: "Tự động gửi bản báo cáo ROI cá nhân hóa qua Email/Zalo trong 2 phút sau khi điền form kèm link đặt lịch Demo trực tiếp với Kỹ sư trưởng.",
+          en: "Triggered automated personalized PDF ROI reports within 2 minutes of form submission with a direct 1:1 Solutions Architect calendar link.",
+        },
+        performanceAction: {
+          vi: "Kết nối HubSpot CRM với Meta CAPI & Google Offline Conversions: chỉ gửi tín hiệu tối ưu khi Sales xác nhận Lead đạt chuẩn SQL.",
+          en: "Connected HubSpot CRM to Meta CAPI & Google Offline Conversions, training ad algorithms strictly on Sales-verified SQL events.",
+        },
+        kpis: ["24.5% MQL→SQL Rate", "2.2x SQL Volume", "164% Pipeline Target"],
+      },
+    ],
+    marcomShowcase: [
+      {
+        id: "b2b-asset-1",
+        mediaSrc: "/images/projects/b2b-industrial-tech-lead-engine/factory-reel.mp4",
+        mediaType: "video-9-16",
+        aspectLabel: "9:16 B2B VIDEO HOOK",
+        tag: { vi: "Video Thực nghiệm Nhà máy 9:16", en: "9:16 On-Site Factory Demo Video" },
+        caption: {
+          vi: "Quay trực tiếp quy trình giảm 22% lỗi vận hành trong 30 giây, đạt 42.6% Hook Rate trên cả Meta và LinkedIn.",
+          en: "30-second on-site walkthrough proving a 22% operational error drop, achieving a 42.6% Hook Rate across Meta and LinkedIn.",
+        },
+      },
+      {
+        id: "b2b-asset-2",
+        mediaSrc: "/images/projects/b2b-industrial-tech-lead-engine/roi-calculator.webp",
+        mediaType: "image",
+        aspectLabel: "16:9 INTERACTIVE LP",
+        tag: { vi: "Công cụ Tính ROI trên Landing Page", en: "Interactive B2B ROI Calculator LP" },
+        caption: {
+          vi: "Giao diện tính toán chi phí tiết kiệm theo quy mô nhà máy giúp tăng thời gian ở lại trang lên 2 phút 40 giây.",
+          en: "Interactive savings calculator tailored by factory headcount, lifting average time-on-page to 2m 40s.",
+        },
+      },
+      {
+        id: "b2b-asset-3",
+        mediaSrc: "/images/projects/b2b-industrial-tech-lead-engine/whitepaper-deck.webp",
+        mediaType: "image",
+        aspectLabel: "16:9 CASE STUDY DECK",
+        tag: { vi: "Báo cáo Case Study C-Level", en: "Executive Case Study Blueprint" },
+        caption: {
+          vi: "Tài liệu tóm tắt 3 trang chuẩn ngôn ngữ tài chính (OPEX/ROI) gửi tự động trước buổi họp Demo.",
+          en: "Concise 3-page financial brief (OPEX/Payback) automatically dispatched ahead of scheduled sales demos.",
+        },
+      },
+    ],
+    performanceProof: {
+      funnelDiagramNote: {
+        vi: "Hệ thống khép kín dữ liệu từ Quảng cáo Video 9:16 -> Phễu lọc Firmographic -> HubSpot CRM -> Phản hồi ngược CAPI.",
+        en: "Closed-loop attribution pipeline: 9:16 Video Ads -> Firmographic Quiz -> HubSpot CRM -> Server-Side CAPI Feedback.",
+      },
+      retargetingLayers: [
+        {
+          layerCode: "LAYER 01 // PROBLEM DISRUPTION",
+          audience: {
+            vi: "Chủ doanh nghiệp, COO, Giám đốc Sản xuất (LinkedIn Job Titles + Meta B2B Lookalike)",
+            en: "Founders, COOs, Plant Directors (LinkedIn Job Titles + Meta B2B Value Lookalike)",
+          },
+          creativeHook: {
+            vi: "Video 9:16: '3 lỗ hổng ngốn 15% lợi nhuận nhà máy mỗi tháng'",
+            en: "9:16 Video: '3 Hidden Bottlenecks Draining 15% of Plant Margin Monthly'",
+          },
+          conversionGoal: {
+            vi: "Lọc tệp xem hết 50% video & truy cập công cụ tính ROI",
+            en: "Isolate 50%+ video viewers & ROI calculator visitors",
+          },
+        },
+        {
+          layerCode: "LAYER 02 // PROOF & QUALIFICATION",
+          audience: {
+            vi: "Tệp tương tác Video + Người tìm kiếm giải pháp ERP/MES/Tự động hóa trên Google",
+            en: "Video Engagers + High-Intent Google Searchers (ERP/MES/Automation keywords)",
+          },
+          creativeHook: {
+            vi: "Case Study thực tế: Cách nhà máy 300 nhân sự thu hồi vốn sau 5.5 tháng",
+            en: "Verified Case Study: How a 300-staff plant achieved full payback in 5.5 months",
+          },
+          conversionGoal: {
+            vi: "Điền Form 4 trường phân loại quy mô để nhận Báo cáo ROI",
+            en: "Complete 4-field firmographic form to unlock custom ROI audit",
+          },
+        },
+        {
+          layerCode: "LAYER 03 // SQL CAPI LOOP",
+          audience: {
+            vi: "MQL đã tải báo cáo ROI nhưng chưa đặt lịch Demo kỹ thuật",
+            en: "Qualified MQLs who unlocked the ROI report but haven't booked a demo",
+          },
+          creativeHook: {
+            vi: "Video Kỹ sư trưởng mời trải nghiệm bản Sandbox 15 phút theo dữ liệu riêng",
+            en: "Solutions Architect video invite for a tailored 15-minute live sandbox session",
+          },
+          conversionGoal: {
+            vi: "Chốt lịch Demo (SQL) -> Bắn sự kiện Offline CAPI tối ưu thuật toán",
+            en: "Confirmed Demo (SQL) -> Fires Offline CAPI event to train ad delivery",
+          },
+        },
+      ],
+      budgetSplit: [
+        {
+          label: { vi: "Meta Ads (Video + CAPI Lead)", en: "Meta Ads (Video + CAPI Lead)" },
+          percentage: 45,
+          channelNote: { vi: "Kênh mở rộng quy mô SQL chính", en: "Primary scalable SQL acquisition engine" },
+        },
+        {
+          label: { vi: "Google Search (High-Intent B2B)", en: "Google Search (High-Intent B2B)" },
+          percentage: 30,
+          channelNote: { vi: "Bắt trọn nhu cầu tìm kiếm giải pháp", en: "Captures bottom-funnel solution searches" },
+        },
+        {
+          label: { vi: "LinkedIn Ads (Account-Based)", en: "LinkedIn Ads (Account-Based)" },
+          percentage: 15,
+          channelNote: { vi: "Nhắm mục tiêu chính xác C-Level", en: "Precision C-Suite & Director targeting" },
+        },
+        {
+          label: { vi: "CRO & Marketing Automation", en: "CRO & Marketing Automation" },
+          percentage: 10,
+          channelNote: { vi: "Vận hành ROI Tool & HubSpot CAPI", en: "Powers interactive ROI tool & CAPI sync" },
+        },
+      ],
+      dataToCreativeLoop: {
+        discovery: {
+          vi: "Đối chiếu dữ liệu HubSpot CRM sau 14 ngày đầu cho thấy 68% Lead đến từ mẫu quảng cáo 'Tải Ebook Miễn phí' là sinh viên hoặc công ty siêu nhỏ không đủ điều kiện mua hàng.",
+          en: "Day-14 HubSpot CRM cohort analysis revealed 68% of leads from 'Free Ebook Download' ads were students or micro-firms below minimum contract size.",
+        },
+        actionTaken: {
+          vi: "Tôi tắt toàn bộ nhóm quảng cáo Ebook đại trà, chuyển sang Video 9:16 nói thẳng về bài toán nhà máy quy mô >50 nhân sự, thêm câu hỏi lọc bắt buộc trên Form và chỉ bắn CAPI khi CRM chấm điểm SQL.",
+          en: "I paused generic ebook ads, launched 9:16 videos explicitly calling out 50+ staff plants, added mandatory firmographic form gates, and restricted CAPI firing to CRM-verified SQLs.",
+        },
+        outcomeLift: {
+          vi: "Tỷ lệ MQL chuyển thành SQL tăng vọt từ 11% lên 24.5%, chi phí trên mỗi SQL thực chất giảm 38% và mang về 164% giá trị Pipeline mục tiêu.",
+          en: "MQL-to-SQL conversion surged from 11% to 24.5%, cost per verified SQL dropped by 38%, and total attributed pipeline hit 164% of quarterly target.",
+        },
+        fullNarrative: {
+          vi: "Khi phát hiện 68% Lead từ quảng cáo Ebook không đạt chuẩn B2B ở ngày thứ 14, tôi chuyển sang Video 9:16 lọc thẳng quy mô nhà máy và đồng bộ HubSpot CAPI theo chuẩn SQL, nâng tỷ lệ SQL lên 24.5% và giảm 38% chi phí.",
+          en: "Discovering on Day 14 that 68% of ebook leads missed B2B criteria, I pivoted to firmographic-Specific 9:16 video hooks and HubSpot SQL CAPI optimization, lifting SQL rate to 24.5% at -38% cost.",
+        },
+      },
+    },
+    retrospective: {
+      beforeAfterMetrics: [
+        {
+          label: { vi: "Tỷ lệ MQL đạt chuẩn Sales (SQL %)", en: "MQL-to-SQL Qualification Rate" },
+          before: 11,
+          after: 24.5,
+          unit: "%",
+          displayBefore: "11.0%",
+          displayAfter: "24.5%",
+          deltaBadge: "+122% Lift",
+        },
+        {
+          label: { vi: "Chỉ số Chi phí mỗi SQL (Cost/SQL)", en: "Verified Cost-Per-SQL Index" },
+          before: 100,
+          after: 62,
+          unit: "idx",
+          displayBefore: "100% (Gốc)",
+          displayAfter: "62% (Tối ưu)",
+          deltaBadge: "-38% Cost",
+        },
+        {
+          label: { vi: "3-Second Hook Rate (B2B Video)", en: "3-Second Hook Rate (B2B Video)" },
+          before: 18.5,
+          after: 42.6,
+          unit: "%",
+          displayBefore: "18.5%",
+          displayAfter: "42.6%",
+          deltaBadge: "+130% Lift",
+        },
+        {
+          label: { vi: "Tỷ lệ Đặt lịch Demo thành công", en: "Demo Show-Up Rate" },
+          before: 48,
+          after: 79,
+          unit: "%",
+          displayBefore: "48.0%",
+          displayAfter: "79.0%",
+          deltaBadge: "+64% Lift",
+        },
+      ],
+      businessImpact: [
+        {
+          vi: "Tăng gấp 2.2 lần số lượng cuộc hẹn Demo đạt chuẩn (SQL) cho đội ngũ Sales B2B mà không cần tăng tổng ngân sách media.",
+          en: "Scaled Sales-Qualified Demo bookings (SQLs) by 2.2x for the enterprise sales squad on the exact same media spend.",
+        },
+        {
+          vi: "Rút ngắn thời gian phản hồi và phân loại Lead từ 24 giờ xuống còn 2 phút nhờ luồng tự động hóa ROI Calculator + HubSpot.",
+          en: "Compressed lead qualification and response turnaround from 24 hours to under 2 minutes via automated ROI scoring.",
+        },
+      ],
+      brandImpact: [
+        {
+          vi: "Định vị thương hiệu như chuyên gia thực chiến trong ngành sản xuất nhờ chuỗi Video Case Study quay thật tại nhà máy.",
+          en: "Positioned the brand as a pragmatic industry authority through transparent, on-site factory turnaround video case studies.",
+        },
+        {
+          vi: "Xóa bỏ hoàn toàn mâu thuẫn giữa bộ phận Marketing và Sales nhờ thống nhất định nghĩa SQL ngay trên Dashboard Looker Studio.",
+          en: "Eliminated Marketing-vs-Sales friction by aligning both teams around a single real-time SQL Looker Studio attribution dashboard.",
+        },
+      ],
+      winningFormula: {
+        vi: "Video 9:16 chứng minh ROI tại hiện trường + Câu hỏi lọc quy mô (Positive Friction) + Tối ưu thuật toán Ads bằng tín hiệu Offline CAPI từ CRM.",
+        en: "On-site 9:16 ROI video proof + Strategic firmographic form friction + Server-side CRM SQL CAPI algorithm training.",
+      },
+      whatToImprove: {
+        vi: "Bước tiếp theo sẽ triển khai Account-Based Marketing (ABM) cá nhân hóa Landing Page theo từng khu công nghiệp trọng điểm để tăng thêm 15–20% tỷ lệ chốt.",
+        en: "Next phase involves rolling out dynamic ABM landing pages tailored to specific industrial zones to lift enterprise close rates by another 15–20%.",
+      },
+    },
+  },
+  {
+    slug: "flagship-o2o-brand-ambassador-series",
+    category: "marcom-event",
+    thumbnail: "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/stock-images/937438c560ada1c83317f2c11b3454b0.jpg",
+    visualAccentCode: "MARCOM // O2O EVENT + VIRAL SERIES",
+    industryPill: {
+      vi: "Phong cách sống & Cộng đồng Gen Z",
+      en: "Lifestyle & Gen Z Community",
+    },
+    rolePill: {
+      vi: "MarCom & Event Project Lead",
+      en: "MarCom & Event Project Lead",
+    },
+    timeframe: "Q3–Q4 / 2024 (4 Tháng)",
+    budgetScale: {
+      vi: "Quy mô Trung-Lớn (8 chữ số VNĐ • NDA-Safe)",
+      en: "Mid-Scale MarCom Budget (8-Figure VND • NDA-Safe)",
+    },
+    channels: [
+      "TikTok Viral Series",
+      "O2O Flagship Event",
+      "Micro-KOL / Ambassador",
+      "PR & Community Group",
+      "Meta Event Ads",
+    ],
+    title: {
+      vi: "Chuỗi Sự kiện O2O & Brand Ambassador: Từ 22M+ Lượt xem Tự nhiên đến Chuyển đổi Thực tế",
+      en: "O2O Flagship Activation & Ambassador Series: Turning 22M+ Viral Views into Tracked Conversions",
+    },
+    shortSummary: {
+      vi: "Kết hợp 35 Micro-Creators và sự kiện trải nghiệm O2O có gắn mã QR định danh, thu hút 4,500+ người tham dự và vượt 35% KPI.",
+      en: "Orchestrated 35 micro-ambassadors and a UTM-tracked O2O festival with 4,500+ attendees, beating conversion KPIs by 35%.",
+    },
+    cardMiniMetrics: [
+      {
+        value: "22.4M+ Views",
+        label: { vi: "Tổng lượt xem chiến dịch", en: "Total Campaign Video Views" },
+      },
+      {
+        value: "4,500+ Khách",
+        label: { vi: "Check-in Sự kiện O2O", en: "Verified O2O Event Check-ins" },
+      },
+      {
+        value: "+135% KPI",
+        label: { vi: "Chuyển đổi đăng ký sau sự kiện", en: "Post-Event Conversion Target" },
+      },
+    ],
+    kpiComparison: [
+      {
+        metric: { vi: "Tổng Lượt xem Đa kênh (Views)", en: "Cross-Channel Video Views" },
+        target: "15.0M Views",
+        achieved: "22.4M Views",
+        delta: "+49.3% vs Target",
+      },
+      {
+        metric: { vi: "Lượt Đăng ký & Check-in O2O", en: "O2O Registration & Check-in" },
+        target: "3,000 Người",
+        achieved: "4,520 Người",
+        delta: "+50.6% Turnout",
+      },
+      {
+        metric: { vi: "Chi phí mỗi Lượt Đăng ký Sự kiện", en: "Cost Per Event Registration" },
+        target: "Chuẩn lịch sử (100%)",
+        achieved: "64% mức chuẩn",
+        delta: "-36.0% CPA",
+      },
+      {
+        metric: { vi: "Tỷ lệ Chuyển đổi Mua hàng / Đăng ký", en: "Post-Event Commercial Conversion" },
+        target: "100% Kế hoạch",
+        achieved: "135% Kế hoạch",
+        delta: "+35.0% Exceeded",
+      },
+    ],
+    challenge: {
+      marketContext: {
+        vi: "Các sự kiện thương hiệu dành cho giới trẻ thường rơi vào bẫy 'đông người xem nhưng không đo lường được doanh thu' và rớt nhiệt ngay sau khi sự kiện kết thúc.",
+        en: "Youth lifestyle brand activations frequently suffer from vanity attendance metrics with zero post-event attribution or commercial follow-through.",
+      },
+      marcomBottleneck: {
+        vi: "Thuê 1-2 KOL hạng A ngốn tới 60% ngân sách nhưng nội dung mang nặng tính quảng cáo trả tiền, thiếu sự đồng cảm và tương tác hai chiều.",
+        en: "Booking 1-2 macro-celebrities consumed 60% of the budget while producing overly scripted posts with low authentic community engagement.",
+      },
+      performanceBottleneck: {
+        vi: "Dữ liệu người tham gia sự kiện offline bị đứt gãy hoàn toàn với hệ thống Digital Ads, dẫn đến không thể Remarketing chốt đơn sau sự kiện.",
+        en: "Offline event foot traffic was completely siloed from digital ad accounts, preventing post-event retargeting and commercial conversion.",
+      },
+      customerInsight: {
+        vi: "Gen Z tham gia sự kiện không chỉ để xem sân khấu mà để có 'nội dung cá nhân hóa khoe lên mạng xã hội' cùng nhóm bạn và thần tượng ngách (Micro-Creator).",
+        en: "Gen Z attends offline activations not just to watch a stage, but to co-create shareable social identity moments alongside niche micro-creators.",
+      },
+      bigIdea: {
+        vi: "\"Mỗi Người Tham Dự Là Một Kênh Phát Sóng\": Thay 2 KOL lớn bằng mạng lưới 35 Đại sứ/Micro-Creators đồng sáng tạo, kết hợp vé QR định danh cá nhân hóa xuyên suốt O2O.",
+        en: "\"Every Attendee Is a Broadcast Node\": Replaced macro-KOL spend with a 35-creator co-creation squad and gamified UTM QR passes bridging offline booths to online retargeting.",
+      },
+    },
+    funnelSynergy: [
+      {
+        stageCode: "TOFU",
+        stageName: {
+          vi: "TOFU — Kích Hoạt Làn Sóng UGC từ 35 Đại Sứ & Micro-Creators",
+          en: "TOFU — Multi-Creator UGC Wave & Social Proof Seeding",
+        },
+        marcomAction: {
+          vi: "Triển khai thử thách biến hình & kể chuyện thật cùng 35 Đại sứ trên TikTok/Reels với bộ khung kịch bản 3 giây đầu được chuẩn hóa.",
+          en: "Activated 35 micro-ambassadors on TikTok/Reels using a standardized 3-second hook playbook and community challenge hashtag.",
+        },
+        performanceAction: {
+          vi: "Dùng Spark Ads / Partnership Ads bơm ngân sách trực tiếp vào 8 video của Đại sứ có tốc độ tăng trưởng tự nhiên (Organic Velocity) cao nhất.",
+          en: "Deployed Spark Ads & Partnership Ads exclusively behind the top 8 creator videos demonstrating organic viral velocity.",
+        },
+        kpis: ["22.4M+ Total Views", "68% Organic Reach Share", "-42% blended CPM"],
+      },
+      {
+        stageCode: "MOFU",
+        stageName: {
+          vi: "MOFU — Chuyển Hóa Lượt Xem Thành Vé Điện Tử QR Định Danh",
+          en: "MOFU — Gamified E-Ticket Capture & Pre-Event Warmup",
+        },
+        marcomAction: {
+          vi: "Tung Landing Page săn vé giới hạn kèm đặc quyền 'Fast-Track' khi rủ thêm bạn bè cùng đăng ký (Viral Referral Loop).",
+          en: "Launched a limited-drop E-Ticket portal featuring a 'Fast-Track VIP Pass' referral mechanic when inviting friends.",
+        },
+        performanceAction: {
+          vi: "Retarget toàn bộ tệp tương tác video của 35 Creators bằng quảng cáo đếm ngược số lượng vé còn lại theo thời gian thực.",
+          en: "Retargeted all 35 creator video engagers with dynamic countdown ads highlighting remaining ticket tiers.",
+        },
+        kpis: ["6,100+ E-Tickets Issued", "1.38x Referral Multiplier", "-36% Cost Per Registration"],
+      },
+      {
+        stageCode: "BOFU",
+        stageName: {
+          vi: "BOFU — Trải Nghiệm O2O Quét QR & Remarketing Chốt Chuyển Đổi",
+          en: "BOFU — On-Site QR Booth Tracking & 72-Hour Commercial Retargeting",
+        },
+        marcomAction: {
+          vi: "Thiết kế 5 trạm trải nghiệm sản phẩm tại sự kiện; mỗi lần khách quét QR nhận quà sẽ tự động gắn thẻ sở thích vào CRM.",
+          en: "Engineered 5 interactive product zones on-site where scanning QR codes for instant perks tagged user preferences in the CRM.",
+        },
+        performanceAction: {
+          vi: "Kích hoạt chiến dịch Flash Offer 72 giờ ngay sau sự kiện nhắm đúng sản phẩm khách đã quét QR tại quầy trải nghiệm.",
+          en: "Triggered a 72-hour post-event Flash Offer campaign dynamically matched to the exact booth zones each attendee scanned.",
+        },
+        kpis: ["4,520 Verified Check-ins", "84% Booth QR Scan Rate", "135% Conversion Target"],
+      },
+    ],
+    marcomShowcase: [
+      {
+        id: "o2o-asset-1",
+        mediaSrc: "/images/projects/flagship-o2o-brand-ambassador-series/stage-crowd.webp",
+        mediaType: "image",
+        aspectLabel: "16:9 FLAGSHIP O2O",
+        tag: { vi: "Không gian Sự kiện O2O 4,500+ người", en: "4,500+ Attendee O2O Experiential Zone" },
+        caption: {
+          vi: "Thiết kế luồng di chuyển 5 trạm trải nghiệm tích hợp QR Check-in giúp ghi nhận hành vi thực tế của 84% khách tham dự.",
+          en: "5-zone experiential layout with integrated QR check-ins capturing behavioral interest data from 84% of attendees.",
+        },
+      },
+      {
+        id: "o2o-asset-2",
+        mediaSrc: "/images/projects/flagship-o2o-brand-ambassador-series/creator-spark.mp4",
+        mediaType: "video-9-16",
+        aspectLabel: "9:16 SPARK ADS WINNER",
+        tag: { vi: "Chuỗi TikTok/Reels từ 35 Đại sứ", en: "35-Ambassador TikTok Spark Ad Series" },
+        caption: {
+          vi: "Video hậu trường chuẩn bị sự kiện của Micro-Creator đạt 3.2M views tự nhiên trước khi được đẩy thêm Spark Ads.",
+          en: "Behind-the-scenes creator reel hitting 3.2M organic views before scaling registrations via TikTok Spark Ads.",
+        },
+      },
+      {
+        id: "o2o-asset-3",
+        mediaSrc: "/images/projects/flagship-o2o-brand-ambassador-series/qr-pass-flow.webp",
+        mediaType: "image",
+        aspectLabel: "16:9 O2O DATA FLOW",
+        tag: { vi: "Hệ thống Vé QR & Gamification", en: "Gamified UTM QR E-Ticket System" },
+        caption: {
+          vi: "Vé điện tử cá nhân hóa kết nối trực tiếp dữ liệu check-in tại sự kiện với tệp Custom Audience trên Meta & Zalo.",
+          en: "Personalized QR pass bridging on-site booth check-ins directly to Meta Custom Audiences and Zalo remarketing.",
+        },
+      },
+    ],
+    performanceProof: {
+      funnelDiagramNote: {
+        vi: "Mô hình O2O Attribution khép kín: Biến độ phủ tự nhiên của Micro-Creators thành dữ liệu định danh tại sự kiện và doanh số hậu sự kiện.",
+        en: "Closed-loop O2O Attribution: Converting creator organic reach into tagged on-site check-ins and post-event commercial sales.",
+      },
+      retargetingLayers: [
+        {
+          layerCode: "LAYER 01 // CREATOR SPARK WAVE",
+          audience: {
+            vi: "Tệp người theo dõi của 35 Micro-Creators & Gen Z tại TP.HCM / Hà Nội",
+            en: "Followers of 35 Micro-Creators & Gen Z cohorts in HCMC / Hanoi",
+          },
+          creativeHook: {
+            vi: "Video 9:16 POV: 'Lý do hội bạn thân không thể bỏ lỡ cuối tuần này'",
+            en: "9:16 POV Reels: 'Why Your Squad Cannot Miss This Weekend's Drop'",
+          },
+          conversionGoal: {
+            vi: "Tạo hiệu ứng FOMO & Thu thập tệp xem video >50%",
+            en: "Ignite community FOMO & build >50% video viewer pools",
+          },
+        },
+        {
+          layerCode: "LAYER 02 // VIRAL E-TICKET DROP",
+          audience: {
+            vi: "Tệp xem video + Bạn bè được mời qua tính năng Referral Fast-Track",
+            en: "Video Engagers + Peers invited via Fast-Track Referral Links",
+          },
+          creativeHook: {
+            vi: "Quảng cáo Đăng ký nhận Vé QR + Quà tặng giới hạn tại cổng",
+            en: "Instant QR Pass Registration + Limited Door-Gift Unlock",
+          },
+          conversionGoal: {
+            vi: "Hoàn tất đăng ký Vé QR (6,100+ vé phát hành)",
+            en: "Complete QR Pass registration (6,100+ passes issued)",
+          },
+        },
+        {
+          layerCode: "LAYER 03 // 72H POST-EVENT BOOTH RETARGETING",
+          audience: {
+            vi: "4,520 khách đã quét QR tại từng quầy sản phẩm trong sự kiện",
+            en: "4,520 verified attendees segmented by on-site booth QR scans",
+          },
+          creativeHook: {
+            vi: "Ưu đãi độc quyền 72h cho đúng dòng sản phẩm khách đã trải nghiệm tại quầy",
+            en: "72-Hour Exclusive Offer matched to the exact product zone visited on-site",
+          },
+          conversionGoal: {
+            vi: "Chốt đơn hàng / Đăng ký gói dịch vụ (Đạt 135% KPI)",
+            en: "Commercial checkout / package conversion (135% of KPI)",
+          },
+        },
+      ],
+      budgetSplit: [
+        {
+          label: { vi: "O2O Production & Booth Tech", en: "O2O Production & Booth Tech" },
+          percentage: 38,
+          channelNote: { vi: "Sân khấu, 5 trạm trải nghiệm & hệ thống QR", en: "Stage, 5 interactive zones & QR tracking" },
+        },
+        {
+          label: { vi: "35 Micro-Creators & Ambassadors", en: "35 Micro-Creators & Ambassadors" },
+          percentage: 27,
+          channelNote: { vi: "Sản xuất nội dung đồng sáng tạo đa góc nhìn", en: "Co-created multi-angle short-form videos" },
+        },
+        {
+          label: { vi: "TikTok Spark Ads & Meta Event Ads", en: "TikTok Spark Ads & Meta Event Ads" },
+          percentage: 25,
+          channelNote: { vi: "Khuếch đại video thắng & chốt vé QR", en: "Amplifying winning creator hooks & ticket registrations" },
+        },
+        {
+          label: { vi: "Post-Event Retargeting & Zalo ZNS", en: "Post-Event Retargeting & Zalo ZNS" },
+          percentage: 10,
+          channelNote: { vi: "Chuyển hóa khách tham dự thành doanh thu", en: "Converting event foot traffic into tracked sales" },
+        },
+      ],
+      dataToCreativeLoop: {
+        discovery: {
+          vi: "Sau 5 ngày mở cổng đăng ký vé, dữ liệu cho thấy các mẫu quảng cáo dùng Key Visual sân khấu chính thức có CPA cao gấp 2.1 lần so với video tự quay bằng điện thoại của các Đại sứ.",
+          en: "Five days into ticket registration, ad analytics showed official studio Key Visual banners had a 2.1x higher CPA than raw smartphone videos shot by student ambassadors.",
+        },
+        actionTaken: {
+          vi: "Tôi rút 70% ngân sách khỏi banner tĩnh, chuyển sang đẩy Spark Ads cho 6 video POV rủ bạn đi sự kiện có tỷ lệ chia sẻ cao nhất và gắn thêm cơ chế 'Rủ 2 bạn nhận vé Fast-Track'.",
+          en: "I reallocated 70% of banner spend into Spark Ads amplifying the top 6 high-share POV creator videos and embedded a 'Refer 2 Friends for Fast-Track VIP' hook on the landing page.",
+        },
+        outcomeLift: {
+          vi: "Hệ số lan truyền tự nhiên đạt 1.38x (mỗi 100 vé quảng cáo kéo thêm 38 vé giới thiệu miễn phí), kéo giảm 36% CPA đăng ký và lấp đầy 4,520 khách check-in thực tế.",
+          en: "Achieved a 1.38x viral referral multiplier (every 100 paid registrations generated 38 free peer sign-ups), cutting registration CPA by 36% and driving 4,520 verified check-ins.",
+        },
+        fullNarrative: {
+          vi: "Phát hiện poster chính thức có giá vé đăng ký đắt gấp đôi video tự quay ở ngày thứ 5, tôi dồn 70% ngân sách sang Spark Ads của Micro-Creators kèm cơ chế mời bạn nhận vé VIP, giúp giảm 36% CPA và thu hút 4,520 khách check-in.",
+          en: "Seeing official event posters cost 2.1x more per sign-up than creator clips on Day 5, I shifted 70% of media into top Micro-Creator Spark Ads with a VIP referral loop, cutting CPA by 36% and packing the venue with 4,520 check-ins.",
+        },
+      },
+    },
+    retrospective: {
+      beforeAfterMetrics: [
+        {
+          label: { vi: "Tỷ lệ Lấp đầy Check-in Thực tế (Show-up)", en: "Registered-to-Check-in Show-Up Rate" },
+          before: 52,
+          after: 74.1,
+          unit: "%",
+          displayBefore: "52.0%",
+          displayAfter: "74.1%",
+          deltaBadge: "+42% Lift",
+        },
+        {
+          label: { vi: "Chỉ số Chi phí mỗi Vé Đăng ký (CPA)", en: "Cost Per Event Registration Index" },
+          before: 100,
+          after: 64,
+          unit: "idx",
+          displayBefore: "100% (Gốc)",
+          displayAfter: "64% (Tối ưu)",
+          deltaBadge: "-36% CPA",
+        },
+        {
+          label: { vi: "Tỷ lệ Khách Tham dự Mua hàng sau Sự kiện", en: "Post-Event Attendee Conversion Rate" },
+          before: 6.5,
+          after: 14.8,
+          unit: "%",
+          displayBefore: "6.5%",
+          displayAfter: "14.8%",
+          deltaBadge: "+127% Lift",
+        },
+        {
+          label: { vi: "Tỷ trọng Lượt xem Tự nhiên (Organic Share)", en: "Organic Views Share of Total Reach" },
+          before: 35,
+          after: 68,
+          unit: "%",
+          displayBefore: "35.0%",
+          displayAfter: "68.0%",
+          deltaBadge: "+94% Organic",
+        },
+      ],
+      businessImpact: [
+        {
+          vi: "Vượt 35% chỉ tiêu doanh thu/chuyển đổi hậu sự kiện nhờ chiến dịch Remarketing 72 giờ đánh trúng dữ liệu quét QR tại từng quầy.",
+          en: "Surpassed post-event commercial targets by 35% via 72-hour retargeting tailored to on-site booth QR scan behavior.",
+        },
+        {
+          vi: "Tiết kiệm 36% chi phí thu hút mỗi người đăng ký nhờ cơ chế Referral mời bạn bè và tận dụng Spark Ads từ Micro-Creators.",
+          en: "Reduced cost per event registration by 36% by combining creator Spark Ads with a gamified peer-referral ticket mechanic.",
+        },
+      ],
+      brandImpact: [
+        {
+          vi: "Tạo ra hơn 1,400+ video và story do chính người tham dự đăng tải tự nhiên trong 48 giờ diễn ra sự kiện, tổng cộng 22.4M+ lượt xem.",
+          en: "Sparked 1,400+ attendee-generated videos and stories within 48 hours of the event, totaling 22.4M+ cross-platform views.",
+        },
+        {
+          vi: "Biến mạng lưới 35 Đại sứ thành cộng đồng truyền thông dài hạn của thương hiệu với chi phí duy trì thấp hơn 50% so với thuê KOL lẻ.",
+          en: "Converted the 35-creator cohort into a long-term brand ambassador guild at 50% lower ongoing cost than one-off macro-KOL bookings.",
+        },
+      ],
+      winningFormula: {
+        vi: "Mạng lưới 35 Micro-Creators đồng sáng tạo + Vé mời Referral Fast-Track + Định danh QR tại từng trạm O2O để Remarketing chốt đơn trong 72 giờ.",
+        en: "35-creator co-creation wave + Fast-Track referral ticketing + On-site QR booth tagging feeding a 72-hour commercial retargeting sprint.",
+      },
+      whatToImprove: {
+        vi: "Sẽ nâng cấp trải nghiệm quét QR tại sự kiện bằng Mini-App trên Zalo để khách không cần nhập lại thông tin ở bất kỳ quầy nào và nhận voucher tức thì.",
+        en: "Future activations will unify booth QR scans inside a single Zalo Mini-App for zero-friction single sign-on and instant voucher redemption.",
+      },
+    },
+  },
+  {
+    slug: "omnichannel-d2c-ecommerce-cro-growth",
+    category: "imc",
+    thumbnail: "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/stock-images/98f89cb9994f5c382ab964062c4039db.jpg",
+    visualAccentCode: "D2C // CREATIVE SPRINT + CRO",
+    industryPill: {
+      vi: "Bán lẻ & E-Commerce D2C",
+      en: "D2C Retail & E-Commerce",
+    },
+    rolePill: {
+      vi: "Growth & Creative Testing Lead",
+      en: "Growth & Creative Testing Lead",
+    },
+    timeframe: "Q4 / 2024 — Q1 / 2025 (4 Tháng)",
+    budgetScale: {
+      vi: "Quy mô Lớn (9 chữ số VNĐ • NDA-Safe)",
+      en: "Large Scale (9-Figure VND • NDA-Safe)",
+    },
+    channels: [
+      "Meta Advantage+ / Reels",
+      "TikTok Shop & Video Ads",
+      "Google Shopping / PMax",
+      "Landing Page CRO",
+      "Klaviyo / Zalo Retention",
+    ],
+    title: {
+      vi: "Tăng trưởng E-Commerce D2C Mùa Cao Điểm: Ma trận Creative Testing 9:16 & Tối ưu CRO Giỏ hàng",
+      en: "Peak-Season D2C E-Commerce Growth: 9:16 Creative Testing Matrix & Checkout CRO",
+    },
+    shortSummary: {
+      vi: "Vận hành ma trận thử nghiệm 24 biến thể Video 9:16 kết hợp tối ưu trang thanh toán, đạt ROAS 4.8x và tăng 165% doanh thu.",
+      en: "Executed a 24-variant 9:16 video testing matrix paired with mobile checkout CRO, sustaining a 4.8x ROAS and +165% revenue lift.",
+    },
+    cardMiniMetrics: [
+      {
+        value: "ROAS 4.8x",
+        label: { vi: "Hiệu suất Quảng cáo Tổng thể", en: "Blended Campaign ROAS" },
+      },
+      {
+        value: "+165% Lift",
+        label: { vi: "Tăng trưởng Doanh thu Quý", en: "Quarterly Revenue Lift" },
+      },
+      {
+        value: "+41% CVR",
+        label: { vi: "Tăng Tỷ lệ Chốt Giỏ hàng", en: "Mobile Checkout CVR Lift" },
+      },
+    ],
+    kpiComparison: [
+      {
+        metric: { vi: "Tăng trưởng Doanh thu Chiến dịch", en: "Attributed Campaign Revenue Lift" },
+        target: "+100% vs Quý trước",
+        achieved: "+165% vs Quý trước",
+        delta: "+65.0% Above Goal",
+      },
+      {
+        metric: { vi: "Hiệu suất Chi tiêu Quảng cáo (ROAS)", en: "Blended Return on Ad Spend (ROAS)" },
+        target: "3.6x ROAS",
+        achieved: "4.8x ROAS",
+        delta: "+33.3% Efficiency",
+      },
+      {
+        metric: { vi: "Tỷ lệ Chuyển đổi Trang Sản phẩm", en: "Mobile Product Page CVR" },
+        target: "2.80%",
+        achieved: "3.95%",
+        delta: "+41.0% CVR Lift",
+      },
+      {
+        metric: { vi: "Giá trị Đơn hàng Trung bình (AOV)", en: "Average Order Value (AOV)" },
+        target: "+15% AOV",
+        achieved: "+29% AOV",
+        delta: "+29.0% Basket Size",
+      },
+    ],
+    challenge: {
+      marketContext: {
+        vi: "Giai đoạn cao điểm mua sắm cuối năm (Mega Sale 11.11 – Tết) chứng kiến giá thầu quảng cáo thương mại điện tử tăng vọt và người dùng bội thực khuyến mãi giảm giá đơn thuần.",
+        en: "Q4–Q1 Mega Sale season triggered severe auction CPM inflation while consumers grew numb to generic percentage-off discount banners.",
+      },
+      marcomBottleneck: {
+        vi: "Các video quảng cáo sản phẩm hiện hữu bị bão hòa nhanh chóng chỉ sau 5–7 ngày chạy (Creative Fatigue), khiến tần suất lặp lại cao và CTR sụt giảm.",
+        en: "Existing hero product videos suffered rapid creative fatigue within 5–7 days of scaling, causing frequency spikes and CTR decay.",
+      },
+      performanceBottleneck: {
+        vi: "Khách hàng bấm vào xem trang sản phẩm nhiều nhưng tỷ lệ bỏ giỏ hàng trên di động lên tới 76%, đồng thời giá trị đơn lẻ thấp làm mỏng biên lợi nhuận.",
+        en: "Strong mobile product page traffic was undermined by a 76% cart abandonment rate and low single-item Average Order Value (AOV).",
+      },
+      customerInsight: {
+        vi: "Khách hàng không cần thêm một món đồ giảm giá lẻ tẻ—họ muốn một 'Bộ giải pháp phối sẵn (Curated Bundle) giải quyết trọn vẹn nhu cầu quà tặng/sử dụng kèm bảo chứng đánh giá thật'.",
+        en: "Shoppers weren't looking for isolated discounted SKUs—they wanted curated problem-solving bundles backed by side-by-side real user proof.",
+      },
+      bigIdea: {
+        vi: "\"Công Thức Mở Hộp 3 Giây + Gói Combo Thông Minh\": Thiết lập dây chuyền lắp ráp Video 9:16 theo mô-đun (3 Hooks × 2 Bodies × 2 CTAs) dẫn thẳng vào trang Bundle có thanh Freeship động.",
+        en: "\"Modular 3-Second Unboxing + Smart Bundle CRO\": Built a modular 9:16 video assembly line (3 Hooks × 2 Bodies × 2 CTAs) routing to a tiered Bundle LP with dynamic free-shipping meters.",
+      },
+    },
+    funnelSynergy: [
+      {
+        stageCode: "TOFU",
+        stageName: {
+          vi: "TOFU — Thử Nghiệm Tốc Độ Cao Ma Trận Video 9:16 Theo Mô-đun",
+          en: "TOFU — Modular 9:16 Creative Sprint Testing",
+        },
+        marcomAction: {
+          vi: "Sản xuất 24 biến thể video ngắn từ 2 buổi quay bằng cách tách rời 3 giây mở đầu (Problem Hook, Unboxing Hook, Social Proof Hook).",
+          en: "Generated 24 vertical video variants from just 2 shoot days by modularizing 3-second openers (Problem, Unboxing, and Social Proof hooks).",
+        },
+        performanceAction: {
+          vi: "Chạy thử nghiệm ngân sách nhỏ trong 72h để lọc ra top 15% video có Hook Rate >38% và Hold Rate >25%, sau đó đưa vào chiến dịch Scaling.",
+          en: "Ran 72-hour micro-budget sandbox tests to isolate the top 15% of creatives hitting >38% Hook Rate before graduating winners to Advantage+ scaling.",
+        },
+        kpis: ["24 Variants Tested", "44.5% Top Hook Rate", "-28% Outbound CPC"],
+      },
+      {
+        stageCode: "MOFU",
+        stageName: {
+          vi: "MOFU — Tối Ưu CRO Trang Đích & Nâng Giá Trị Giỏ Hàng (AOV)",
+          en: "MOFU — Mobile Product Page CRO & Smart Bundle Engineering",
+        },
+        marcomAction: {
+          vi: "Thiết kế giao diện chọn Combo 2–3 món trực quan kèm video review thực tế 10 giây nằm ngay dưới nút 'Thêm vào giỏ'.",
+          en: "Redesigned mobile product pages with visual 2-to-3 item bundle selectors and embedded 10-second UGC proof clips directly below the fold.",
+        },
+        performanceAction: {
+          vi: "Tích hợp thanh Sticky Add-to-Cart cố định ở đáy màn hình điện thoại và thanh tiến trình 'Mua thêm X để nhận Freeship + Quà tặng'.",
+          en: "Deployed a persistent mobile Sticky Add-to-Cart bar and an interactive 'Add X more for Free Shipping + Gift' cart drawer meter.",
+        },
+        kpis: ["3.95% Mobile CVR (+41%)", "+29% AOV Lift", "-22% Cart Abandonment"],
+      },
+      {
+        stageCode: "BOFU",
+        stageName: {
+          vi: "BOFU — Cứu Giỏ Hàng Bỏ Quên & Khai Thác Vòng Đời Khách Hàng (LTV)",
+          en: "BOFU — Dynamic Cart Recovery & Post-Purchase LTV Loops",
+        },
+        marcomAction: {
+          vi: "Xây dựng kịch bản video ngắn giải đáp 3 rào cản cuối cùng (Chính sách đổi trả 30 ngày, Kiểm hàng trước thanh toán, So sánh kích cỡ).",
+          en: "Created objection-crushing 15s retargeting clips addressing 30-day returns, doorstep inspection, and sizing comparisons.",
+        },
+        performanceAction: {
+          vi: "Kết hợp Dynamic Product Ads (DPA) với tin nhắn Zalo ZNS / Email tự động gửi sau 45 phút bỏ giỏ hàng, duy trì ROAS 4.8x toàn phễu.",
+          en: "Paired Meta/TikTok Dynamic Product Ads with automated 45-minute Zalo ZNS / Email cart recovery flows, sustaining a 4.8x blended ROAS.",
+        },
+        kpis: ["ROAS 4.8x Blended", "18.4% Cart Recovery Rate", "+165% Revenue Growth"],
+      },
+    ],
+    marcomShowcase: [
+      {
+        id: "d2c-asset-1",
+        mediaSrc: "/images/projects/omnichannel-d2c-ecommerce-cro-growth/modular-hooks.mp4",
+        mediaType: "video-9-16",
+        aspectLabel: "9:16 MODULAR HOOKS",
+        tag: { vi: "Ma trận 3 Giây Mở đầu (Hook Matrix)", en: "9:16 Modular 3-Second Hook Matrix" },
+        caption: {
+          vi: "So sánh trực diện 3 biến thể mở đầu trên cùng một cốt truyện sản phẩm, tìm ra Winner đạt ROAS 5.4x.",
+          en: "Side-by-side split test of 3 opening hooks over a single core product body, isolating a 5.4x ROAS winner.",
+        },
+      },
+      {
+        id: "d2c-asset-2",
+        mediaSrc: "/images/projects/omnichannel-d2c-ecommerce-cro-growth/bundle-cro-ui.webp",
+        mediaType: "image",
+        aspectLabel: "16:9 MOBILE CRO UI",
+        tag: { vi: "Giao diện Bundle & Sticky Cart CRO", en: "Mobile Bundle Tier & Sticky Cart UI" },
+        caption: {
+          vi: "Cải tiến UX chọn gói Combo và thanh tiến trình quà tặng giúp tăng 29% giá trị trung bình mỗi đơn hàng (AOV).",
+          en: "Tiered bundle selector and free-gift threshold bar that lifted Average Order Value (AOV) by 29%.",
+        },
+      },
+      {
+        id: "d2c-asset-3",
+        mediaSrc: "/images/projects/omnichannel-d2c-ecommerce-cro-growth/mega-sale-kv.webp",
+        mediaType: "image",
+        aspectLabel: "16:9 CAMPAIGN SYSTEM",
+        tag: { vi: "Hệ thống Visual Mega Sale Đa kênh", en: "Omnichannel Mega Sale Visual System" },
+        caption: {
+          vi: "Đồng bộ nhận diện từ Website D2C, Gian hàng Shopee/TikTok Shop đến chuỗi Livestream chốt đơn.",
+          en: "Cohesive visual identity spanning the D2C storefront, TikTok Shop/Shopee malls, and studio livestream sets.",
+        },
+      },
+    ],
+    performanceProof: {
+      funnelDiagramNote: {
+        vi: "Hệ thống tăng trưởng kép: Tăng tốc độ thử nghiệm Creative đầu phễu song song với nâng AOV & CVR ở trang đích để bảo vệ ROAS.",
+        en: "Dual-engine growth loop: High-velocity top-of-funnel creative testing paired with bottom-funnel AOV & checkout CRO to protect ROAS.",
+      },
+      retargetingLayers: [
+        {
+          layerCode: "LAYER 01 // CREATIVE SANDBOX & SCALE",
+          audience: {
+            vi: "Broad Targeting + Value-Based Lookalike 3% từ nhóm khách hàng có LTV cao nhất",
+            en: "Broad Targeting + 3% Value-Based Lookalikes seeded from top LTV customer cohorts",
+          },
+          creativeHook: {
+            vi: "24 biến thể Video 9:16 (Problem/Solution, Unboxing, Before/After)",
+            en: "24 modular 9:16 video variants (Problem/Solution, Unboxing, Before/After)",
+          },
+          conversionGoal: {
+            vi: "Kéo lưu lượng chất lượng cao vào trang Bundle (CPC -28%)",
+            en: "Drive high-intent traffic to Bundle Landing Pages (-28% CPC)",
+          },
+        },
+        {
+          layerCode: "LAYER 02 // VIEW CONTENT & ENGAGED",
+          audience: {
+            vi: "Khách đã xem trang sản phẩm hoặc xem >75% video trong 7 ngày nhưng chưa thêm giỏ",
+            en: "7-Day Product Page Viewers & >75% Video Viewers with zero cart actions",
+          },
+          creativeHook: {
+            vi: "Carousel tổng hợp Review 5 sao thật + So sánh lợi ích khi mua gói Combo 3 món",
+            en: "Verified 5-Star UGC Review Carousels + Value breakdown of the 3-Item Bundle",
+          },
+          conversionGoal: {
+            vi: "Kích thích Thêm vào giỏ hàng (Add-to-Cart Rate +34%)",
+            en: "Trigger Add-to-Cart actions (+34% ATC lift)",
+          },
+        },
+        {
+          layerCode: "LAYER 03 // CART RECOVERY & VIP UPSELL",
+          audience: {
+            vi: "Khách bỏ giỏ hàng trong 1–72 giờ + Khách cũ từng mua cách đây >45 ngày",
+            en: "1-to-72h Cart Abandoners + Past customers >45 days since last order",
+          },
+          creativeHook: {
+            vi: "Video 15s đập tan lo ngại đổi trả + Nhắc nhở giữ suất Quà tặng giới hạn qua Zalo/DPA",
+            en: "15s Risk-Reversal Guarantee Clip + Limited Free-Gift reservation via Zalo/DPA",
+          },
+          conversionGoal: {
+            vi: "Hoàn tất thanh toán (CVR 3.95% | ROAS tổng 4.8x)",
+            en: "Completed Checkout (3.95% CVR | 4.8x blended ROAS)",
+          },
+        },
+      ],
+      budgetSplit: [
+        {
+          label: { vi: "Meta Ads (Advantage+ & Reels)", en: "Meta Ads (Advantage+ & Reels)" },
+          percentage: 48,
+          channelNote: { vi: "Trụ cột kéo doanh số Website D2C", en: "Primary revenue driver for D2C storefront" },
+        },
+        {
+          label: { vi: "TikTok Ads (Video & Shop Ads)", en: "TikTok Ads (Video & Shop Ads)" },
+          percentage: 27,
+          channelNote: { vi: "Khai thác video xu hướng & chốt nhanh", en: "High-velocity short-form discovery & checkout" },
+        },
+        {
+          label: { vi: "Google Shopping & Brand Search", en: "Google Shopping & Brand Search" },
+          percentage: 15,
+          channelNote: { vi: "Bảo vệ từ khóa thương hiệu & PMax", en: "Captures high-intent shopping & brand queries" },
+        },
+        {
+          label: { vi: "UGC Production & CRO Tooling", en: "UGC Production & CRO Tooling" },
+          percentage: 10,
+          channelNote: { vi: "Sản xuất mô-đun video & kiểm thử A/B", en: "Funds modular creator shoots & A/B testing" },
+        },
+      ],
+      dataToCreativeLoop: {
+        discovery: {
+          vi: "Bản đồ nhiệt Microsoft Clarity và dữ liệu giỏ hàng tuần đầu chỉ ra 64% người dùng mobile thoát ra ở bước chọn phân loại hàng, đồng thời đơn hàng 1 món lẻ không đủ bù chi phí CPA mùa sale.",
+          en: "Week-1 Microsoft Clarity heatmaps and checkout logs revealed 64% of mobile users dropped off at variant selection, while single-item orders suffered margin compression during peak auctions.",
+        },
+        actionTaken: {
+          vi: "Tôi thiết kế lại khối chọn sản phẩm thành 3 gói Combo cài sẵn (Mặc định chọn sẵn gói 'Bán chạy nhất' tiết kiệm 20%), ghim nút thanh toán nổi và quay thêm 6 đoạn Hook 3s mở hộp gói Combo.",
+          en: "I redesigned the selector into 3 pre-configured Bundle Cards (pre-selecting the 'Most Popular 20% Off' tier), pinned a sticky checkout bar, and shot 6 new 3-second bundle unboxing hooks.",
+        },
+        outcomeLift: {
+          vi: "Giá trị đơn hàng trung bình (AOV) tăng ngay 29%, tỷ lệ chuyển đổi mobile tăng từ 2.8% lên 3.95% (+41%), đưa ROAS toàn chiến dịch cán mốc 4.8x.",
+          en: "Average Order Value (AOV) jumped 29%, mobile conversion rate climbed from 2.8% to 3.95% (+41% lift), and blended campaign ROAS stabilized at 4.8x.",
+        },
+        fullNarrative: {
+          vi: "Qua Heatmap Clarity phát hiện 64% khách rớt ở bước chọn mẫu và đơn lẻ lãi mỏng, tôi đổi giao diện sang 3 gói Combo chọn sẵn kèm chuỗi Hook mở hộp 3s, giúp tăng 29% AOV, +41% CVR và đạt ROAS 4.8x.",
+          en: "Spotting a 64% mobile variant-selection drop-off and thin single-SKU margins via Clarity heatmaps, I introduced pre-selected Bundle Cards and 3s unboxing hooks, lifting AOV by 29%, CVR by 41%, and ROAS to 4.8x.",
+        },
+      },
+    },
+    retrospective: {
+      beforeAfterMetrics: [
+        {
+          label: { vi: "Tỷ lệ Chuyển đổi Mobile (Mobile CVR)", en: "Mobile Storefront Conversion Rate" },
+          before: 2.8,
+          after: 3.95,
+          unit: "%",
+          displayBefore: "2.80%",
+          displayAfter: "3.95%",
+          deltaBadge: "+41% Lift",
+        },
+        {
+          label: { vi: "Hiệu suất Quảng cáo (Blended ROAS)", en: "Blended Return on Ad Spend (ROAS)" },
+          before: 3.1,
+          after: 4.8,
+          unit: "x",
+          displayBefore: "3.1x",
+          displayAfter: "4.8x",
+          deltaBadge: "+54% ROAS",
+        },
+        {
+          label: { vi: "Chỉ số Giá trị Đơn hàng (AOV Index)", en: "Average Order Value (AOV Index)" },
+          before: 100,
+          after: 129,
+          unit: "idx",
+          displayBefore: "100% (Gốc)",
+          displayAfter: "129% (Bundle)",
+          deltaBadge: "+29% AOV",
+        },
+        {
+          label: { vi: "Tỷ lệ Giữ chân Xem Video @3s (Hook Rate)", en: "3-Second Video Thumbstop Rate" },
+          before: 24.0,
+          after: 44.5,
+          unit: "%",
+          displayBefore: "24.0%",
+          displayAfter: "44.5%",
+          deltaBadge: "+85% Lift",
+        },
+      ],
+      businessImpact: [
+        {
+          vi: "Đạt mức tăng trưởng doanh thu +165% so với quý liền kề trước đó trong khi vẫn giữ vững biên lợi nhuận nhờ ROAS 4.8x.",
+          en: "Delivered a +165% quarterly revenue lift while protecting net contribution margin with a 4.8x blended ROAS.",
+        },
+        {
+          vi: "Nâng tỷ trọng đơn hàng mua theo gói Combo từ 18% lên 54% tổng số đơn, giúp thương hiệu chịu được mức giá thầu quảng cáo cao mùa Tết.",
+          en: "Increased multi-item bundle orders from 18% to 54% of total checkouts, insulating unit economics against Q4 auction inflation.",
+        },
+      ],
+      brandImpact: [
+        {
+          vi: "Chuẩn hóa quy trình sản xuất 'Modular Creative' giúp đội ngũ In-house nhân bản 20+ video thử nghiệm mỗi tháng mà không tăng chi phí quay.",
+          en: "Institutionalized a modular creative production SOP enabling the in-house team to ship 20+ ad variants monthly at flat production cost.",
+        },
+        {
+          vi: "Tăng 38% tỷ lệ khách hàng quay lại mua lần 2 trong vòng 60 ngày nhờ trải nghiệm mở hộp chỉnh chu và kịch bản chăm sóc Zalo ZNS.",
+          en: "Lifted 60-day repeat purchase rates by 38% through curated unboxing experiences and automated Zalo ZNS replenishment flows.",
+        },
+      ],
+      winningFormula: {
+        vi: "Sản xuất Video 9:16 theo mô-đun (Thay 3 giây đầu) + Giao diện chọn gói Bundle mặc định trên Mobile + Thanh tiến trình Freeship tăng AOV.",
+        en: "Modular 3-second video hook testing + Pre-selected mobile Bundle UI + Dynamic free-shipping cart meter to maximize AOV.",
+      },
+      whatToImprove: {
+        vi: "Trong giai đoạn tới, tôi sẽ triển khai Post-Purchase One-Click Upsell ngay tại trang Cảm ơn (Thank You Page) để cộng thêm 8–10% doanh thu thuần mà không tốn chi phí Ads.",
+        en: "Next optimization is deploying one-click post-purchase upsells on the confirmation screen to capture an extra 8–10% pure-margin revenue.",
+      },
+    },
+  },
+];
+
+export const ARCHIVE_PROJECTS: ArchiveProject[] = [
+  {
+    year: "2025",
+    name: {
+      vi: "Hệ thống Dashboard BI Đa kênh & Phễu Attribution (Looker Studio)",
+      en: "Cross-Channel BI & Multi-Touch Attribution Dashboard (Looker Studio)",
+    },
+    clientType: { vi: "Nội bộ Tập đoàn Giáo dục", en: "In-House Education Group" },
+    specialty: { vi: "Data BI, GA4 & CRM Attribution", en: "Data BI, GA4 & CRM Attribution" },
+    highlightResult: {
+      vi: "Tự động hóa 100% báo cáo P&L theo ngày, tiết kiệm 14 giờ tổng hợp số liệu mỗi tuần.",
+      en: "Automated 100% of daily media P&L reporting, saving 14 hours of manual analyst work weekly.",
+    },
+    href: "/work/university-admissions-imc-2025",
+  },
+  {
+    year: "2024",
+    name: {
+      vi: "Chiến dịch Ra mắt Giải pháp Cloud ERP cho Doanh nghiệp Sản xuất",
+      en: "Enterprise Cloud ERP Go-To-Market & Lead Gen Campaign",
+    },
+    clientType: { vi: "B2B SaaS Tech", en: "B2B SaaS Tech" },
+    specialty: { vi: "LinkedIn ABM & Search Funnel", en: "LinkedIn ABM & Search Funnel" },
+    highlightResult: {
+      vi: "Mang về 85+ lịch hẹn Demo C-Level (SQL) trong 60 ngày, vượt 40% chỉ tiêu quý.",
+      en: "Generated 85+ verified C-Suite demo bookings (SQLs) in 60 days, beating quota by 40%.",
+    },
+    href: "/work/b2b-industrial-tech-lead-engine",
+  },
+  {
+    year: "2024",
+    name: {
+      vi: "Kiểm toán CRO & Tái thiết kế Luồng Thanh toán E-Commerce (Mobile)",
+      en: "Mobile Checkout CRO Audit & Wireframe Overhaul",
+    },
+    clientType: { vi: "Thương hiệu Mỹ phẩm D2C", en: "D2C Skincare Brand" },
+    specialty: { vi: "Landing Page CRO & A/B Testing", en: "Landing Page CRO & A/B Testing" },
+    highlightResult: {
+      vi: "Giảm 24% tỷ lệ bỏ giỏ hàng trên iOS/Android, nâng ROAS từ 3.2x lên 4.5x.",
+      en: "Cut mobile cart abandonment by 24% and lifted blended ROAS from 3.2x to 4.5x.",
+    },
+    href: "/work/omnichannel-d2c-ecommerce-cro-growth",
+  },
+  {
+    year: "2024",
+    name: {
+      vi: "Chuỗi Workshop & PR Định vị Thương hiệu Tuyển dụng (Employer Branding)",
+      en: "Tech Employer Branding IMC & University Tour Series",
+    },
+    clientType: { vi: "Tập đoàn Công nghệ Đa quốc gia", en: "Multinational Tech Corp" },
+    specialty: { vi: "Employer MarCom & Campus Event", en: "Employer MarCom & Campus Event" },
+    highlightResult: {
+      vi: "Thu hút 2,800+ CV kỹ sư trẻ và 4.2M lượt xem chuỗi Reels văn hóa doanh nghiệp.",
+      en: "Attracted 2,800+ engineering applications and 4.2M views on culture Reels.",
+    },
+    href: "/work/flagship-o2o-brand-ambassador-series",
+  },
+  {
+    year: "2023",
+    name: {
+      vi: "Chuyển đổi Hệ thống Tracking sang Server-Side GTM & Meta CAPI",
+      en: "Server-Side GTM & Meta Conversion API (CAPI) Migration",
+    },
+    clientType: { vi: "Chuỗi Bán lẻ Đa kênh (12 Cửa hàng)", en: "Omnichannel Retailer (12 Stores)" },
+    specialty: { vi: "Martech Tracking & Event Match", en: "Martech Tracking & Event Match" },
+    highlightResult: {
+      vi: "Nâng điểm Event Match Quality (EMQ) từ 5.4 lên 8.8/10, khôi phục 28% dữ liệu mất dấu iOS.",
+      en: "Lifted Meta Event Match Quality from 5.4 to 8.8/10, recovering 28% of lost iOS attribution.",
+    },
+  },
+  {
+    year: "2023",
+    name: {
+      vi: "Chiến dịch Mở rộng Thị trường Khu vực (Tier-2 Cities IMC Expansion)",
+      en: "Tier-2 Provincial Market Expansion IMC & Local Activation",
+    },
+    clientType: { vi: "Hệ thống Anh ngữ & EdTech", en: "EdTech & Language Academy" },
+    specialty: { vi: "Local IMC, OOH & Lead Ads", en: "Local IMC, OOH & Lead Ads" },
+    highlightResult: {
+      vi: "Lấp đầy 100% công suất 3 cơ sở mới trong 45 ngày khai trương với CPL thấp hơn 26%.",
+      en: "Reached 100% classroom capacity across 3 new branches within 45 days at -26% CPL.",
+    },
+  },
+  {
+    year: "2022",
+    name: {
+      vi: "Xây dựng Quy trình AI Content & Creative Brief Automation (Notion + LLM)",
+      en: "AI-Assisted Creative Research & Brief Automation Workflow",
+    },
+    clientType: { vi: "Dự án Nâng cấp Vận hành In-house", en: "Internal Creative Ops Initiative" },
+    specialty: { vi: "AI Workflow & Marketing Ops", en: "AI Workflow & Marketing Ops" },
+    highlightResult: {
+      vi: "Rút ngắn 60% thời gian nghiên cứu đối thủ và viết kịch bản Hook thử nghiệm hàng tuần.",
+      en: "Reduced competitor ad research and weekly hook scripting turnaround time by 60%.",
+    },
+  },
+];
