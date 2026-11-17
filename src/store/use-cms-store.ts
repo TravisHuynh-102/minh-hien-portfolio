@@ -91,6 +91,15 @@ interface CMSStoreState {
   isSyncing: boolean;
   isAdminAuthenticated: boolean;
   adminPasscode: string;
+  githubToken: string;
+  lastSyncResult: {
+    savedLocal?: boolean;
+    syncedCloud?: boolean;
+    cloudUrl?: string;
+    cloudError?: string;
+    tokenSource?: string;
+  } | null;
+  setGithubToken: (token: string) => void;
   loginAdmin: (passcode: string) => Promise<{ ok: boolean; error?: string }>;
   logoutAdmin: () => void;
   changeAdminPasscode: (
@@ -113,7 +122,13 @@ interface CMSStoreState {
   deleteArchiveProject: (index: number) => void;
   importFullData: (payload: CMSDataPayload) => void;
   resetToDefaults: () => Promise<void>;
-  saveToServer: () => Promise<boolean>;
+  saveToServer: () => Promise<{
+    ok: boolean;
+    syncedCloud?: boolean;
+    savedLocal?: boolean;
+    cloudUrl?: string;
+    cloudError?: string;
+  }>;
   loadFromServer: () => Promise<void>;
 }
 
@@ -127,6 +142,10 @@ export const useCMSStoreBase = create<CMSStoreState>()(
       isSyncing: false,
       isAdminAuthenticated: false,
       adminPasscode: "",
+      githubToken: "",
+      lastSyncResult: null,
+
+      setGithubToken: (token) => set({ githubToken: token.trim() }),
 
       loginAdmin: async (passcode) => {
         const trimmed = passcode.trim();
@@ -318,19 +337,47 @@ export const useCMSStoreBase = create<CMSStoreState>()(
             archiveProjects: state.archiveProjects,
             lastUpdated: new Date().toISOString(),
           };
+          const headers: Record<string, string> = {
+            "Content-Type": "application/json",
+            "x-admin-passcode": state.adminPasscode,
+          };
+          if (state.githubToken) {
+            headers["x-github-token"] = state.githubToken;
+          }
           const res = await fetch("/api/cms", {
             method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "x-admin-passcode": state.adminPasscode,
-            },
+            headers,
             body: JSON.stringify(payload),
           });
-          set({ isSyncing: false, lastUpdated: payload.lastUpdated || null });
-          return res.ok;
+          const data = (await res.json().catch(() => ({}))) as {
+            ok?: boolean;
+            savedLocal?: boolean;
+            syncedCloud?: boolean;
+            cloudUrl?: string;
+            cloudError?: string;
+            tokenSource?: string;
+          };
+          set({
+            isSyncing: false,
+            lastUpdated: payload.lastUpdated || null,
+            lastSyncResult: {
+              savedLocal: data.savedLocal,
+              syncedCloud: data.syncedCloud,
+              cloudUrl: data.cloudUrl,
+              cloudError: data.cloudError,
+              tokenSource: data.tokenSource,
+            },
+          });
+          return {
+            ok: res.ok && Boolean(data.ok),
+            syncedCloud: data.syncedCloud,
+            savedLocal: data.savedLocal,
+            cloudUrl: data.cloudUrl,
+            cloudError: data.cloudError,
+          };
         } catch {
           set({ isSyncing: false });
-          return false;
+          return { ok: false };
         }
       },
 
@@ -363,6 +410,7 @@ export const useCMSStoreBase = create<CMSStoreState>()(
         lastUpdated: state.lastUpdated,
         isAdminAuthenticated: state.isAdminAuthenticated,
         adminPasscode: state.adminPasscode,
+        githubToken: state.githubToken,
       }),
     }
   )

@@ -13,6 +13,7 @@ import {
   CoverflowCarousel,
   type CoverflowSlide,
 } from "@/components/ui/coverflow-carousel";
+import { trackPortfolioEvent } from "@/components/layout/portfolio-analytics-tracker";
 
 const R2 = "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/stock-images";
 const UNSPLASH = (id: string) =>
@@ -304,6 +305,11 @@ export function FeaturedCaseStudies() {
               }
               onActiveSlideClick={(slide) => {
                 if (slide.href) {
+                  void trackPortfolioEvent({
+                    type: "coverflow_click",
+                    target: slide.href.replace("/work/", ""),
+                    label: `Click 3D Coverflow: ${slide.title || slide.href}`,
+                  });
                   router.push(slide.href);
                 }
               }}

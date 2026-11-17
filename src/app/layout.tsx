@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { StickyNavbar } from "@/components/layout/sticky-navbar";
 import { CommandPalette } from "@/components/layout/command-palette";
+import { PortfolioAnalyticsTracker } from "@/components/layout/portfolio-analytics-tracker";
 import { SITE_CONFIG } from "@/data/site-config";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -13,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://marketer-portfolio.vn"),
+  metadataBase: new URL("https://minh-hien-portfolio.vercel.app"),
   title: {
     default: `${SITE_CONFIG.marketerName} | Full-Stack Marketer (MarCom Strategy & Performance Growth)`,
     template: `%s | ${SITE_CONFIG.marketerName}`,
@@ -74,7 +77,10 @@ export default function RootLayout({
         ) : null}
         <StickyNavbar />
         <CommandPalette />
+        <PortfolioAnalyticsTracker />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

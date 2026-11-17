@@ -1,35 +1,56 @@
 import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
+import {
+  getCloudConfigInfo,
+  readCloudOrLocalJSON,
+  writeCloudAndLocalJSON,
+} from "@/lib/github-storage";
 
-const CMS_FILE_PATH = path.join(process.cwd(), "src", "data", "cms-data.json");
-const AUTH_FILE_PATH = path.join(
-  process.cwd(),
-  "src",
-  "data",
-  "cms-auth.json"
-);
+const CMS_REL_PATH = "src/data/cms-data.json";
+const AUTH_REL_PATH = "src/data/cms-auth.json";
 
 const DEFAULT_PASSCODE = process.env.ADMIN_PASSCODE || "minhhien2026";
 
-async function getActivePasscode(): Promise<string> {
+async function getActivePasscode(customGithubToken?: string): Promise<string> {
   try {
-    const raw = await fs.readFile(AUTH_FILE_PATH, "utf-8");
-    const parsed = JSON.parse(raw) as { passcode?: string };
-    if (parsed.passcode && parsed.passcode.trim().length >= 4) {
-      return parsed.passcode.trim();
+    const { data } = await readCloudOrLocalJSON<{ passcode?: string } | null>(
+      AUTH_REL_PATH,
+      null,
+      customGithubToken
+    );
+    if (data?.passcode && data.passcode.trim().length >= 4) {
+      return data.passcode.trim();
     }
   } catch {
-    // Use default or env passcode
+    // Fallback to default
   }
   return DEFAULT_PASSCODE;
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
-    const raw = await fs.readFile(CMS_FILE_PATH, "utf-8");
-    const parsed = JSON.parse(raw);
-    return NextResponse.json(parsed, { status: 200 });
+    const customToken =
+      request.headers.get("x-github-token")?.trim() || undefined;
+    const { data, source } = await readCloudOrLocalJSON<Record<
+      string,
+      unknown
+    > | null>(CMS_REL_PATH, null, customToken);
+
+    if (!data) {
+      return NextResponse.json(null, { status: 200 });
+    }
+
+    return NextResponse.json(
+      {
+        ...data,
+        _syncSource: source,
+      },
+      {
+        status: 200,
+        headers: {
+          "Cache-Control": "no-store, no-cache, must-revalidate",
+        },
+      }
+    );
   } catch {
     return NextResponse.json(null, { status: 200 });
   }
@@ -37,12 +58,21 @@ export async function GET() {
 
 export async function PUT(request: Request) {
   try {
+    const customToken =
+      request.headers.get("x-github-token")?.trim() || undefined;
     const body = (await request.json()) as {
-      action?: "verify" | "change";
+      action?: "verify" | "change" | "cloud-status";
       passcode?: string;
       newPasscode?: string;
+      githubToken?: string;
     };
-    const activePasscode = await getActivePasscode();
+
+    if (body.action === "cloud-status") {
+      const info = getCloudConfigInfo(body.githubToken || customToken);
+      return NextResponse.json({ ok: true, cloud: info });
+    }
+
+    const activePasscode = await getActivePasscode(customToken);
 
     if (body.action === "change") {
       if ((body.passcode || "").trim() !== activePasscode) {
@@ -58,13 +88,34 @@ export async function PUT(request: Request) {
           { status: 400 }
         );
       }
-      await fs.mkdir(path.dirname(AUTH_FILE_PATH), { recursive: true });
-      await fs.writeFile(
-        AUTH_FILE_PATH,
-        JSON.stringify({ passcode: nextPass, updatedAt: new Date().toISOString() }, null, 2),
-        "utf-8"
+
+      const syncRes = await writeCloudAndLocalJSON(
+        AUTH_REL_PATH,
+        {
+          passcode: nextPass,
+          updatedAt: new Date().toISOString(),
+        },
+        "chore(cms): update admin security vault passcode",
+        body.githubToken || customToken
       );
-      return NextResponse.json({ ok: true });
+
+      if (!syncRes.savedLocal && !syncRes.syncedCloud) {
+        return NextResponse.json(
+          {
+            ok: false,
+            error:
+              syncRes.cloudError ||
+              "Không thể lưu mật khẩu mới lên Cloud hoặc Local",
+          },
+          { status: 500 }
+        );
+      }
+
+      return NextResponse.json({
+        ok: true,
+        savedLocal: syncRes.savedLocal,
+        syncedCloud: syncRes.syncedCloud,
+      });
     }
 
     const isValid = (body.passcode || "").trim() === activePasscode;
@@ -75,7 +126,8 @@ export async function PUT(request: Request) {
       );
     }
 
-    return NextResponse.json({ ok: true });
+    const cloud = getCloudConfigInfo(body.githubToken || customToken);
+    return NextResponse.json({ ok: true, cloud });
   } catch {
     return NextResponse.json(
       { ok: false, error: "Lỗi xác thực Admin" },
@@ -88,7 +140,9 @@ export async function POST(request: Request) {
   try {
     const providedPasscode =
       request.headers.get("x-admin-passcode")?.trim() || "";
-    const activePasscode = await getActivePasscode();
+    const customToken =
+      request.headers.get("x-github-token")?.trim() || undefined;
+    const activePasscode = await getActivePasscode(customToken);
 
     if (providedPasscode !== activePasscode) {
       return NextResponse.json(
@@ -97,10 +151,38 @@ export async function POST(request: Request) {
       );
     }
 
-    const body = await request.json();
-    await fs.mkdir(path.dirname(CMS_FILE_PATH), { recursive: true });
-    await fs.writeFile(CMS_FILE_PATH, JSON.stringify(body, null, 2), "utf-8");
-    return NextResponse.json({ ok: true, savedAt: new Date().toISOString() });
+    const body = (await request.json()) as Record<string, unknown>;
+    const savedAt = new Date().toISOString();
+    const payload = {
+      ...body,
+      lastUpdated: savedAt,
+    };
+
+    const syncResult = await writeCloudAndLocalJSON(
+      CMS_REL_PATH,
+      payload,
+      `content(cms): update portfolio content via Admin Studio (${savedAt.slice(0, 19)}Z)`,
+      customToken
+    );
+
+    if (!syncResult.savedLocal && !syncResult.syncedCloud) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error:
+            syncResult.cloudError ||
+            "Không thể lưu dữ liệu trên Serverless khi chưa cấu hình GitHub Cloud Token.",
+          ...syncResult,
+        },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({
+      ok: true,
+      savedAt,
+      ...syncResult,
+    });
   } catch (error) {
     return NextResponse.json(
       {

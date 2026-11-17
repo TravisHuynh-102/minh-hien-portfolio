@@ -9,6 +9,7 @@ import {
   ArrowLeft,
   ArrowUp,
   Award,
+  BarChart3,
   Check,
   Download,
   ExternalLink,
@@ -39,8 +40,14 @@ import type {
   TestimonialItem,
 } from "@/types/portfolio";
 import { cn, t } from "@/lib/utils";
+import { AdminAnalyticsCloudPanel } from "@/components/admin/admin-analytics-cloud-panel";
 
-type AdminMainTab = "profile" | "projects" | "archive" | "credentials";
+type AdminMainTab =
+  | "profile"
+  | "projects"
+  | "archive"
+  | "credentials"
+  | "analytics";
 type ProjectEditorSubTab =
   | "card"
   | "station1"
@@ -203,8 +210,14 @@ export function AdminCMSDashboard() {
   };
 
   const handleSaveAndPublish = async () => {
-    const ok = await saveToServer();
-    if (ok) {
+    const res = await saveToServer();
+    if (res.syncedCloud) {
+      showNotification(
+        lang === "vi"
+          ? "Đã lưu & đồng bộ trực tiếp lên GitHub Cloud (main)!"
+          : "Saved & synced directly to GitHub Cloud (main)!"
+      );
+    } else if (res.ok || res.savedLocal) {
       showNotification(
         lang === "vi"
           ? "Đã lưu & đồng bộ dữ liệu lên Server thành công!"
@@ -213,7 +226,7 @@ export function AdminCMSDashboard() {
     } else {
       showNotification(
         lang === "vi"
-          ? "Đã lưu vào bộ nhớ trình duyệt (Local Storage)!"
+          ? "Đã lưu vào bộ nhớ trình duyệt (mở tab 5 để cấu hình GitHub Cloud)!"
           : "Saved to browser Local Storage!"
       );
     }
@@ -642,7 +655,7 @@ export function AdminCMSDashboard() {
 
       <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
         {/* Main Navigation Tabs */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {[
             {
               id: "projects" as const,
@@ -671,6 +684,13 @@ export function AdminCMSDashboard() {
               titleVi: "4. Chứng chỉ & Đánh giá (Quotes)",
               titleEn: "4. Certifications & Endorsements",
               badge: `${profile.credentials.length + profile.testimonials.length} mục`,
+            },
+            {
+              id: "analytics" as const,
+              icon: BarChart3,
+              titleVi: "5. Số liệu Traffic & Cloud Sync",
+              titleEn: "5. Traffic Analytics & Cloud Sync",
+              badge: "Live + GitHub",
             },
           ].map((tab) => {
             const Icon = tab.icon;
@@ -2461,6 +2481,17 @@ export function AdminCMSDashboard() {
               </div>
             </div>
           </div>
+        )}
+
+        {activeTab === "analytics" && (
+          <AdminAnalyticsCloudPanel
+            onNotify={showNotification}
+            onJumpToProject={(idx) => {
+              setSelectedProjectIdx(idx);
+              setActiveTab("projects");
+              setProjectSubTab("card");
+            }}
+          />
         )}
       </div>
     </div>
